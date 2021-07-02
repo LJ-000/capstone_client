@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import GreetingCard from './GreetingCard'
 
-class CardContainer extends Component {
+const CardContainer = (props) => {
 
-    render() {
         return (
             <div>
-                {this.props.card.map(card =>
+                {props.card.map(card =>
                 <GreetingCard
                 card={card}
                 key={card.id}
@@ -14,6 +13,5 @@ class CardContainer extends Component {
             </div>
         )
     }
-}
 
 export default CardContainer

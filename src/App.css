@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.greeting_card{
+  margin-left: 75px;
+}
