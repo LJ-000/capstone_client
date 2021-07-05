@@ -39,16 +39,25 @@ export default class CreateEvent extends Component {
 
       requestToServer = (e) => {
         e.preventDefault()
-        const reqObj = {
-          headers: { "Content-Type": "application/json" },
-          method: "POST",
-          body: JSON.stringify({ ...this.state })
-        }
+        const reqObj = {}
+          reqObj.headers = { "Content-Type": "application/json" }
+          reqObj.method = "POST"
+          reqObj.body = JSON.stringify({ ...this.state })
+        
     
         fetch(subscription_url, reqObj)
           .then(res => res.json())
-          .then((subscription => this.props.addEvent(subscription)))
-      }
+          .then((newSubscription) => {
+            this.props.createNew(newSubscription)
+            this.setState({
+            reminder_date: [],
+            mail_by: [],
+            event_name: [],
+            repeat: [],
+            reminder_method: []
+    }) 
+      }) 
+          }
 
       handleEvent(date) {
         this.setState({
@@ -89,7 +98,7 @@ export default class CreateEvent extends Component {
             <div>
               <h2 className="add_new"> Add New Event</h2>
             </div>
-            <form onSubmit={this.requestToServer} className="form-inline ml-4">
+            <form onSubmit={e => this.requestToServer(e)} className="form-inline ml-4">
     
               <div className="event_name_field">
                 <input value={this.state.event_name} onChange={(e) => this.setState({ event_name: e.target.value })} type="text" className="form-control mb-2 mr-sm-2" placeholder="Name this event!" />

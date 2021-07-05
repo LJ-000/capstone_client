@@ -1,7 +1,5 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { Component, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-// import DatePicker from 'react-datepicker';
-import "react-datepicker/dist/react-datepicker.css";
 import CreateEvent from './components/CreateEvent';
 import Login from './components/Login';
 import Register from './components/Register';
@@ -9,6 +7,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import CardContainer from './components/CardContainer';
 import HowItWorks from './components/HowItWorks';
+import MessageIdeas from './components/MessageIdeas';
 import AboutKismet from './components/AboutKismet';
 // import KismetBox from './components/KismetBox'
 import SubscriptContainer from './components/SubscriptContainer.js';
@@ -27,15 +26,6 @@ state = {
     reminder_date: [],
     mail_by: [],
   };
-
-//   constructor (props) {
-//     super(props)
-//     this.state = {
-//       event_date: new Date()
-//     };
-//     this.handleChange = this.handleChange.bind(this);
-//     this.onFormSubmit = this.onFormSubmit.bind(this);
-//   }
 
       componentDidMount() {
         fetch(card_url)
@@ -74,16 +64,6 @@ state = {
     //     localStorage.clear()
     //     }
  
-    // handleChange(date) {
-    //     this.setState({
-    //       event_date: date
-    //     })
-    //   }
-    
-    //   onFormSubmit(e) {
-    //     e.preventDefault();
-    //     console.log(this.state.event_date)
-    //   }
 
         render() {
         return(
@@ -119,19 +99,12 @@ state = {
             <Route path={["/howitworks"]}>
                 <HowItWorks/>
             </Route>
+
+            <Route path={["/messageideas"]}>
+                <MessageIdeas/>
+            </Route>
             
             <Route path={["/calendar"]}>
-            {/* <form onSubmit={ this.onFormSubmit }>
-            <div className="form-group">
-            <DatePicker
-              selected={ this.state.event_date }
-              onChange={ this.handleChange }
-              name="event_date"
-              dateFormat="MM/dd/yyyy"
-          />
-          <button className="btn btn-primary">Submit Event Date</button>
-        </div>
-      </form> */}
             <CreateEvent/>
             </Route>
 
