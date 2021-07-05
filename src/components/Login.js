@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 const Login = () => {
     let logIn= (e) => {
@@ -15,7 +15,9 @@ const Login = () => {
             })
             })
             .then(res => res.json()
-            .then(console.log))
+            .then(userInfo => {
+                localStorage.token = userInfo.token 
+            }))
         }
 
 return(

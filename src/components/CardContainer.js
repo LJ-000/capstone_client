@@ -10,6 +10,7 @@ const CardContainer = (props) => {
                 card={card}
                 key={card.id}
                 />)}
+            
             </div>
         )
     }

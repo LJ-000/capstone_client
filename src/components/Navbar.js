@@ -17,8 +17,8 @@ const Navbar =() => {
                    <Link to="/cards">
                    <a href="/cards"> Greeting Cards </a>
                    </Link>
-                   <Link to="/calendars">
-                   <a  href="/calendars"> Calendar</a>
+                   <Link to="/calendar">
+                   <a  href="/calendar"> Calendar</a>
                    </Link>
                    <Link to="/kismetbox">
                    <a  href="kismetbox"> Kismet Box</a>

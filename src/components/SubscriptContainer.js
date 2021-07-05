@@ -10,6 +10,7 @@ const SubscriptContainer = (props) => {
             subscription={subscription}
             key={subscription.id}
             />)}
+            
         </div>
     )
 }
