@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Card, CardBody, CardTitle, CardSubtitle, CardGroup} from 'reactstrap';
 
+const style = { width: "50rem", height: "18rem"};
+
 class MessageIdeas extends Component {
       
 render() {
@@ -8,8 +10,8 @@ return (
 
 <div>
 
-<CardGroup>
-<Card>  
+<CardGroup className="message1" style={style}>
+<Card >  
 <CardTitle>Get Well Soon Wishes</CardTitle>
 <CardSubtitle>If you know the recipient well enough (and you know they’ll appreciate it!), a little humor is sometimes just the thing to brighten someone’s day in the hospital. However, if your colleague is the serious sort or you’re not very close, it’s safer to stick with more formal sentiments. Don't use cliches like, "There must be a reason." These well-known phrases have hardly any meaning, seem insincere, and can offend the ill person.</CardSubtitle>
 <CardBody>  
@@ -32,10 +34,10 @@ return (
     </CardBody>
     </Card>
     </CardGroup>
-
+    
 
 <CardGroup>
-<Card> 
+<Card style={style}>
 <CardTitle>Anniversary Card Messages</CardTitle>
 <CardSubtitle>A romantic card message would be to repeat something that you said in your wedding vows or write a line from her favorite love poem, romance movie or quote. Or...</CardSubtitle>
 <CardBody>
@@ -60,9 +62,8 @@ Thank you for the memories of yesterday, for the happiness today, and the promis
 </Card>
 </CardGroup>
 
-
 <CardGroup>
-<Card> 
+<Card style={style}> 
 <CardTitle>Birthday Card Message</CardTitle>
 <CardBody>
     You'll always be younger than springtime. Happy Birthday!
@@ -93,7 +94,7 @@ Thank you for the memories of yesterday, for the happiness today, and the promis
 
 
 <CardGroup>
-<Card> 
+<Card style={style}> 
 <CardTitle>New Baby Welcome Message</CardTitle>
 <CardBody>
     Nice work, Mom and Dad!
@@ -109,9 +110,8 @@ Thank you for the memories of yesterday, for the happiness today, and the promis
 </Card>
 </CardGroup>
 
-
 <CardGroup>
-<Card> 
+<Card style={style}> 
 <CardTitle>Congratulations/Good Luck</CardTitle>
 <CardBody>
     Congratulations! Glad to hear the good news!
@@ -129,7 +129,7 @@ Thank you for the memories of yesterday, for the happiness today, and the promis
 
 
 <CardGroup>
-<Card> 
+<Card style={style}> 
 <CardTitle>Graduation Card Ideas</CardTitle>
 <CardBody>
     Congratulations and best wishes for a succesful future.
@@ -154,7 +154,7 @@ Thank you for the memories of yesterday, for the happiness today, and the promis
 </CardGroup>
 
 <CardGroup>
-<Card> 
+<Card style={style}> 
 <CardTitle>"Thank You" Card Samples</CardTitle>
 <CardSubtitle>Personalize your thank you note by acknowledging the specific gift you received or the good deed or favor that someone did for you. Use words like Generous, Generosity, Useful, Perfect, Thoughtful, Appreciate, Grateful, Much Needed, Always Treasure.</CardSubtitle>
 <CardBody>
@@ -173,7 +173,7 @@ Thank you for the memories of yesterday, for the happiness today, and the promis
 </CardGroup>
 
 <CardGroup>
-<Card> 
+<Card style={style}> 
 <CardTitle>"Thinking of You" and "Just Because" Messages</CardTitle>
 <CardSubtitle>Make your recipient feel special by surprising them with an unexpected gift. Thinking of you flowers can be sent any time a person wants to let another person know that they are in their thoughts. Send an encouraging card with a message of warmth and hope.</CardSubtitle>
 <CardBody>

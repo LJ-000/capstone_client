@@ -22,6 +22,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+
 }
 
 .App-link {
@@ -39,4 +40,8 @@
 
 .greeting_card{
   margin-left: 75px;
+}
+
+.message1 {
+  padding-bottom: 200px;
 }
