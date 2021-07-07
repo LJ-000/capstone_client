@@ -14,7 +14,12 @@ const Register = () => {
             })
             .then(res => res.json()
             .then(console.log))
+            // .then (data => {
+            //     localStorage.setItem("token", data.jwt)
+            //     propTypes.Register(data.user)
+            // })
         }
+    
 
 return(
     <div>

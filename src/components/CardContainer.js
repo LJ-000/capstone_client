@@ -1,25 +1,40 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import GreetingCard from './GreetingCard';
 import ThemeSearch from './Filters/ThemeSearch';
 import AudienceSearch from './Filters/AudienceSearch';
 // import ContentSearch from './Filters/ContentSearch'
 
-
-
 const CardContainer = (props) => {
+    const [cards, setCards] = useState(props.card)
+    function filterChange(theme) {
+        // debugger 
+        const filteredCards = props.card.filter(card => card.theme === theme.value)
+        // console.log(filteredCards)
+            setCards(filteredCards)
+            return filteredCards 
+    }
+    useEffect(() => { setCards(props.card)}, [props.card] )
+
+    function filterAudience(audience) {
+        const filteredAudience = props.card.filter(card => card.audience === audience.value)
+            setCards(filteredAudience)
+            return filteredAudience
+    }
+
+    useEffect(() => { setCards(props.card)}, [props.card] )
+
 
         return (
             <div>
                 <button onClick={event =>  window.location.href='/kismetbox'}>Checkout</button>
-                <ThemeSearch/>
-                <AudienceSearch/>
+                <ThemeSearch filterChange = {filterChange} />
+                <AudienceSearch filterAudience = {filterAudience} />
                 {/* <ContentSearch/> */}
-                {props.card.map(card =>
+                {cards.map(card =>
                 <GreetingCard
                 card={card}
                 key={card.id}
                 />)}
-            
             </div>
         )
     }

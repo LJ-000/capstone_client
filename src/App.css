@@ -42,6 +42,38 @@
   padding-inline-start: 5%;
 }
 
+.nav_home{
+  padding-left: 20px;
+} 
+
+.nav_how{
+  padding-left: 20px;
+}
+
+.nav_cards{
+  padding-left: 20px;
+}
+
+.nav_cal {
+  padding-left: 20px;
+}
+
+.nav_box{
+  padding-left: 20px;
+}
+
+.nav_about{
+  padding-left: 20px;
+}
+
+.nav_login{
+  padding-left: 20px;
+}
+
+.nav_register{
+  padding-left: 20px;
+}
+
 .greeting_card{
   margin-left: 75px;
 }

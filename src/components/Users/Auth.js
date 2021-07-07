@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+// import Login from 'Login';
+// import Register from 'Register'
 
 const subscription_url = "http://localhost:3000/api/v1/subscriptions";
 const [subscriptions, setSubscriptions] = useState([])

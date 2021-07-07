@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import DatePicker from 'react-datepicker';
+import React, {Component} from 'react';
+import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 const subscription_url = "http://localhost:3000/api/v1/subscriptions";
@@ -106,8 +106,8 @@ export default class CreateEvent extends Component {
                 <input value={this.state.event_name} onChange={(e) => this.setState({ event_name: e.target.value })} type="text" className="form-control mb-2 mr-sm-2" placeholder="Name this event!" />
               </div>
 
-              <div className="event_date_field">
-                <DatePicker
+//               <div className="event_date_field">
+//                 <DatePicker
                 selected={ this.state.date }
                 onChange={ this.handleEvent }
                 name="event_date"
@@ -156,8 +156,7 @@ export default class CreateEvent extends Component {
                 </select>
               </div>
 
-    
-              <button type="submit" className="btn btn-primary mb-2" onClick={event =>  window.location.href='/subscriptions'}>>Submit</button>
+              <button type="submit" className="btn btn-primary mb-2" onClick={event =>  window.location.href='/subscriptions'}>Submit</button>
             </form>
           </section>
         )
@@ -167,3 +166,63 @@ export default class CreateEvent extends Component {
 
 
 
+
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import Modal from 'react-modal';
+
+// const customStyles = {
+//   content: {
+//     top: '50%',
+//     left: '50%',
+//     right: 'auto',
+//     bottom: 'auto',
+//     marginRight: '-50%',
+//     transform: 'translate(-50%, -50%)',
+//   },
+// };
+
+// // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+// Modal.setAppElement('#yourAppElement');
+
+// function App() {
+//   let subtitle;
+//   const [modalIsOpen, setIsOpen] = React.useState(false);
+
+//   function openModal() {
+//     setIsOpen(true);
+//   }
+
+//   function afterOpenModal() {
+//     // references are now sync'd and can be accessed.
+//     subtitle.style.color = '#f00';
+//   }
+
+//   function closeModal() {
+//     setIsOpen(false);
+//   }
+
+//   return (
+//     <div>
+//       <button onClick={openModal}>Open Modal</button>
+//       <Modal
+//         isOpen={modalIsOpen}
+//         onAfterOpen={afterOpenModal}
+//         onRequestClose={closeModal}
+//         style={customStyles}
+//         contentLabel="Example Modal"
+//       >
+//         <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
+//         <button onClick={closeModal}>close</button>
+//         <div>I am a modal</div>
+//         <form>
+//           <input />
+//           <button>tab navigation</button>
+//           <button>stays</button>
+//           <button>inside</button>
+//           <button>the modal</button>
+//         </form>
+//       </Modal>
+//     </div>
+//   );
+// }

@@ -12,13 +12,8 @@ import AboutKismet from './components/AboutKismet';
 import KismetBox from './components/KismetBox'
 import SubscriptContainer from './components/SubscriptContainer.js';
 
-
-
-const BASE_URL = 'http://localhost:3000/api/v1/';
 const card_url = "http://localhost:3000/api/v1/cards";
 const subscription_url = "http://localhost:3000/api/v1/subscriptions";
-
-// const [subscriptions, setSubscriptions] = useState([])
 
 
 class AppContainer extends Component {
