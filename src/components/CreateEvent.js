@@ -1,8 +1,12 @@
+import { withTheme } from '@material-ui/core';
 import React, {Component} from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { Modal } from 'react-responsive-modal';
+import 'react-responsive-modal/styles.css';
 
 const subscription_url = "http://localhost:3000/api/v1/subscriptions";
+
 
 export default class CreateEvent extends Component {
 
@@ -13,7 +17,8 @@ export default class CreateEvent extends Component {
         repeat: [],
         reminder_method: [],
         date: [],
-        card_id: ""
+        card_id: "",
+        openModal : false
     };
 
     constructor (props) {
@@ -94,6 +99,17 @@ export default class CreateEvent extends Component {
         console.log(this.state.mail_by)
     }
 
+  
+        onClickButton = e =>{
+            e.preventDefault()
+            this.setState({openModal : true})
+        }
+    
+        onCloseModal = ()=>{
+            this.setState({openModal : false})
+        }
+    
+
       render() {
         return (
           <section className="create_event">
@@ -103,17 +119,18 @@ export default class CreateEvent extends Component {
             <form onSubmit={e => this.requestToServer(e)} className="form-inline ml-4">
     
               <div className="event_name_field">
-                <input value={this.state.event_name} onChange={(e) => this.setState({ event_name: e.target.value })} type="text" className="form-control mb-2 mr-sm-2" placeholder="Name this event!" />
+                Give this Event a Name
+                <input value={this.state.event_name} onChange={(e) => this.setState({ event_name: e.target.value })} type="text" className="form-control mb-2 mr-sm-2" />
               </div>
 
-//               <div className="event_date_field">
-//                 <DatePicker
+               <div className="event_date_field">
+                 Select Event Date
+                <DatePicker
                 selected={ this.state.date }
                 onChange={ this.handleEvent }
                 name="event_date"
                 dateFormat="MM/dd/yyyy"
                 />
-                <button className="btn btn-primary">Submit Event Date</button>
               </div>
 
               <div className="repeat_field">
@@ -128,23 +145,23 @@ export default class CreateEvent extends Component {
               </div>
     
               <div className="reminder_date_field">
+                Select Date for Your Reminder
                 <DatePicker
                 selected={ this.state.reminder_date }
                 onChange={ this.handleReminder }
                 name="event_date"
                 dateFormat="MM/dd/yyyy"
                 />
-                <button>Submit Event Date</button>
               </div>
 
               <div className="mail_by_field">
+                Select Your Mail By Date 
               <DatePicker
                 selected={ this.state.mail_by }
                 onChange={ this.handleMailBy }
                 name="event_date"
                 dateFormat="MM/dd/yyyy"
                 />
-                <button>Submit Event Date</button>
               </div>
 
               <div className="delivery_method_field">
@@ -156,7 +173,14 @@ export default class CreateEvent extends Component {
                 </select>
               </div>
 
-              <button type="submit" className="btn btn-primary mb-2" onClick={event =>  window.location.href='/subscriptions'}>Submit</button>
+              <button onClick={this.onClickButton}>Submit Event</button>
+              <div>
+              <Modal open={this.state.openModal} onClose={this.onCloseModal}>
+                <h1>Your New Event Was Added!</h1>
+                <button onClick={event =>  window.location.href='/cards'}>Find the Perfect Card!</button>
+                <button onClick={event =>  window.location.href='/calendar'}>Review My Calendar!</button>
+              </Modal>   
+              </div>
             </form>
           </section>
         )
@@ -164,65 +188,35 @@ export default class CreateEvent extends Component {
       }
     }
 
-
-
-
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import Modal from 'react-modal';
-
-// const customStyles = {
-//   content: {
-//     top: '50%',
-//     left: '50%',
-//     right: 'auto',
-//     bottom: 'auto',
-//     marginRight: '-50%',
-//     transform: 'translate(-50%, -50%)',
-//   },
-// };
-
-// // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
-// Modal.setAppElement('#yourAppElement');
-
-// function App() {
-//   let subtitle;
-//   const [modalIsOpen, setIsOpen] = React.useState(false);
-
-//   function openModal() {
-//     setIsOpen(true);
-//   }
-
-//   function afterOpenModal() {
-//     // references are now sync'd and can be accessed.
-//     subtitle.style.color = '#f00';
-//   }
-
-//   function closeModal() {
-//     setIsOpen(false);
-//   }
-
-//   return (
-//     <div>
-//       <button onClick={openModal}>Open Modal</button>
-//       <Modal
-//         isOpen={modalIsOpen}
-//         onAfterOpen={afterOpenModal}
-//         onRequestClose={closeModal}
-//         style={customStyles}
-//         contentLabel="Example Modal"
-//       >
-//         <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
-//         <button onClick={closeModal}>close</button>
-//         <div>I am a modal</div>
-//         <form>
-//           <input />
-//           <button>tab navigation</button>
-//           <button>stays</button>
-//           <button>inside</button>
-//           <button>the modal</button>
-//         </form>
-//       </Modal>
-//     </div>
-//   );
-// }
+    // import React, { Component } from 'react'
+    // import { Modal } from 'react-responsive-modal';
+    // import 'react-responsive-modal/styles.css';
+    
+    // class ModalInClassComponents extends Component {
+    
+    //     state={
+    //         openModal : false
+    //     }
+    
+    //     onClickButton = e =>{
+    //         e.preventDefault()
+    //         this.setState({openModal : true})
+    //     }
+    
+    //     onCloseModal = ()=>{
+    //         this.setState({openModal : false})
+    //     }
+    
+    //     render() {
+    //         return (
+    //             <div>
+    //                 <button onClick={this.onClickButton}>Click Me</button>
+    //                 <Modal open={this.state.openModal} onClose={this.onCloseModal}>
+    //                     <h1>You Did it!</h1>
+    //                 </Modal>   
+    //             </div>
+    //         )
+    //     }  
+    // }
+    
+    // export default ModalInClassComponents;

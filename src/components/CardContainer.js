@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import GreetingCard from './GreetingCard';
 import ThemeSearch from './Filters/ThemeSearch';
 import AudienceSearch from './Filters/AudienceSearch';
-// import ContentSearch from './Filters/ContentSearch'
 
 const CardContainer = (props) => {
     const [cards, setCards] = useState(props.card)

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import CreateEvent from './components/CreateEvent';
+// import CreateEvent from './components/CreateEvent';
 import Login from './components/Users/Login';
 import Register from './components/Users/Register';
 import Navbar from './components/Navbar';
@@ -9,8 +9,9 @@ import CardContainer from './components/CardContainer';
 import HowItWorks from './components/HowItWorks';
 import MessageIdeas from './components/MessageIdeas';
 import AboutKismet from './components/AboutKismet';
-import KismetBox from './components/KismetBox'
+import KismetBox from './components/KismetBox';
 import SubscriptContainer from './components/SubscriptContainer.js';
+import CalendarView from './components/CalendarView'
 
 const card_url = "http://localhost:3000/api/v1/cards";
 const subscription_url = "http://localhost:3000/api/v1/subscriptions";
@@ -88,7 +89,7 @@ state = {
             </Route>
             
             <Route path={["/calendar"]}>
-            <CreateEvent/>
+            <CalendarView/>
             </Route>
 
             <Route path={["/aboutkismet"]}>
