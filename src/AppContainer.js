@@ -1,15 +1,15 @@
-import React, { Component, useEffect } from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import CreateEvent from './components/CreateEvent';
-import Login from './components/Login';
-import Register from './components/Register';
+import Login from './components/Users/Login';
+import Register from './components/Users/Register';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import CardContainer from './components/CardContainer';
 import HowItWorks from './components/HowItWorks';
 import MessageIdeas from './components/MessageIdeas';
 import AboutKismet from './components/AboutKismet';
-// import KismetBox from './components/KismetBox'
+import KismetBox from './components/KismetBox'
 import SubscriptContainer from './components/SubscriptContainer.js';
 
 
@@ -17,6 +17,9 @@ import SubscriptContainer from './components/SubscriptContainer.js';
 const BASE_URL = 'http://localhost:3000/api/v1/';
 const card_url = "http://localhost:3000/api/v1/cards";
 const subscription_url = "http://localhost:3000/api/v1/subscriptions";
+
+// const [subscriptions, setSubscriptions] = useState([])
+
 
 class AppContainer extends Component {
 
@@ -45,24 +48,9 @@ state = {
     );
 }
 
-    //     useEffect(() => {
-    //         fetch(subscription_url), {
-    //         method: "GET",
-    //         headers: {
-    //             Authorization: `Bearer ${localStorage.token}`
-    //             }
-    //         }
-    //         .then(res => res.json())
-    //         .then(data => this.setState({
-    //             subscription: data,  
-    //    }
-    //         )
-    //             ) })
-    //   }
-
-    // Logout = () => {
-    //     localStorage.clear()
-    //     }
+    Logout = () => {
+        localStorage.clear()
+        }
  
 
         render() {
@@ -88,9 +76,9 @@ state = {
                 <CardContainer card={this.state.card}/>
             </Route>
 
-            {/* <Route exact path={["/kismetbox"]}>
+            <Route exact path={["/kismetbox"]}>
                 <KismetBox subscription={this.state.subscription}/>
-            </Route> */}
+            </Route>
 
             <Route exact path={["/kismetbox"]}>
                 <SubscriptContainer subscription={this.state.subscription}/>

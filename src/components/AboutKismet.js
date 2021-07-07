@@ -5,7 +5,10 @@ class AboutKismet extends Component {
 render() {
     return (
 
-<div>About Kismet Placeholder and Contact Us</div>
+<div>
+    <p>Kismet was created by a super cool person who doesn't have time to work on this page more</p>
+    <p>Contact Us Placeholder</p> 
+    </div>
 
         )
     }

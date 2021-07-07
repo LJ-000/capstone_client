@@ -10,6 +10,7 @@ const GreetingCard = (props) => {
                 <CardImg className="card_img" width="20%" src={props.card.img}/>
                 <CardTitle tag="h5">{props.card.theme}</CardTitle> 
                 <CardSubtitle tag="h6" className="mb-2 text-muted">{props.card.price}</CardSubtitle>
+                {/* <button onClick={event => }> Add to cart</button> */}
                 </Card>
                 </CardGroup>
         </div>

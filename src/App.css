@@ -38,10 +38,44 @@
   }
 }
 
+.navbar{
+  padding-inline-start: 5%;
+}
+
 .greeting_card{
   margin-left: 75px;
 }
 
 .message1 {
-  padding-bottom: 200px;
+  padding-bottom: 30px;
+}
+.message2 {
+  padding-bottom: 30px;
+}
+.message3 {
+  padding-bottom: 30px;
+}
+.message4 {
+  padding-bottom: 30px;
+}
+.message5 {
+  padding-bottom: 30px;
+}
+.message6 {
+  padding-bottom: 30px;
+}
+.message7 {
+  padding-bottom: 30px;
+}
+.message8 {
+  padding-bottom: 30px;
+}
+
+.theme_search{
+  padding-bottom: 20px;
+}
+
+
+.audience_search{
+  padding-bottom: 20px;
 }

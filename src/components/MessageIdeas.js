@@ -36,8 +36,8 @@ return (
     </CardGroup>
     
 
-<CardGroup>
-<Card style={style}>
+<CardGroup className="message2" style={style}>
+<Card>
 <CardTitle>Anniversary Card Messages</CardTitle>
 <CardSubtitle>A romantic card message would be to repeat something that you said in your wedding vows or write a line from her favorite love poem, romance movie or quote. Or...</CardSubtitle>
 <CardBody>
@@ -62,8 +62,8 @@ Thank you for the memories of yesterday, for the happiness today, and the promis
 </Card>
 </CardGroup>
 
-<CardGroup>
-<Card style={style}> 
+<CardGroup className="message3" style={style}>
+<Card> 
 <CardTitle>Birthday Card Message</CardTitle>
 <CardBody>
     You'll always be younger than springtime. Happy Birthday!
@@ -93,8 +93,8 @@ Thank you for the memories of yesterday, for the happiness today, and the promis
 </CardGroup>
 
 
-<CardGroup>
-<Card style={style}> 
+<CardGroup className="message4" style={style}>
+<Card> 
 <CardTitle>New Baby Welcome Message</CardTitle>
 <CardBody>
     Nice work, Mom and Dad!
@@ -110,8 +110,8 @@ Thank you for the memories of yesterday, for the happiness today, and the promis
 </Card>
 </CardGroup>
 
-<CardGroup>
-<Card style={style}> 
+<CardGroup className="message5" style={style}>
+<Card> 
 <CardTitle>Congratulations/Good Luck</CardTitle>
 <CardBody>
     Congratulations! Glad to hear the good news!
@@ -128,8 +128,8 @@ Thank you for the memories of yesterday, for the happiness today, and the promis
 
 
 
-<CardGroup>
-<Card style={style}> 
+<CardGroup className="message6" style={style}>
+<Card> 
 <CardTitle>Graduation Card Ideas</CardTitle>
 <CardBody>
     Congratulations and best wishes for a succesful future.
@@ -153,8 +153,8 @@ Thank you for the memories of yesterday, for the happiness today, and the promis
 </Card>
 </CardGroup>
 
-<CardGroup>
-<Card style={style}> 
+<CardGroup className="message7" style={style}>
+<Card> 
 <CardTitle>"Thank You" Card Samples</CardTitle>
 <CardSubtitle>Personalize your thank you note by acknowledging the specific gift you received or the good deed or favor that someone did for you. Use words like Generous, Generosity, Useful, Perfect, Thoughtful, Appreciate, Grateful, Much Needed, Always Treasure.</CardSubtitle>
 <CardBody>
@@ -172,8 +172,8 @@ Thank you for the memories of yesterday, for the happiness today, and the promis
 </Card>
 </CardGroup>
 
-<CardGroup>
-<Card style={style}> 
+<CardGroup className="message8" style={style}>
+<Card> 
 <CardTitle>"Thinking of You" and "Just Because" Messages</CardTitle>
 <CardSubtitle>Make your recipient feel special by surprising them with an unexpected gift. Thinking of you flowers can be sent any time a person wants to let another person know that they are in their thoughts. Send an encouraging card with a message of warmth and hope.</CardSubtitle>
 <CardBody>

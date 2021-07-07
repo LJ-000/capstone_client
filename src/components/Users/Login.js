@@ -4,7 +4,7 @@ const Login = () => {
     let logIn= (e) => {
         e.preventDefault()
 
-        fetch("http://localhost:3000/api/v1/users", {
+        fetch("http://localhost:3000/api/v1/users/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

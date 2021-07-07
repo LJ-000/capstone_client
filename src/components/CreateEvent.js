@@ -12,13 +12,14 @@ export default class CreateEvent extends Component {
         event_name: [],
         repeat: [],
         reminder_method: [],
+        date: [],
         card_id: ""
     };
 
     constructor (props) {
           super(props)
           this.state = {
-            event_date: new Date()
+            date: new Date()
           };
           this.state = {
             reminder_date: new Date()
@@ -54,14 +55,15 @@ export default class CreateEvent extends Component {
             mail_by: [],
             event_name: [],
             repeat: [],
-            reminder_method: []
+            reminder_method: [],
+            date: []
     }) 
       }) 
           }
 
       handleEvent(date) {
         this.setState({
-        event_date: date
+        date: date
       })
     }
   
@@ -106,7 +108,7 @@ export default class CreateEvent extends Component {
 
               <div className="event_date_field">
                 <DatePicker
-                selected={ this.state.event_date }
+                selected={ this.state.date }
                 onChange={ this.handleEvent }
                 name="event_date"
                 dateFormat="MM/dd/yyyy"
@@ -155,7 +157,7 @@ export default class CreateEvent extends Component {
               </div>
 
     
-              <button type="submit" className="btn btn-primary mb-2">Submit</button>
+              <button type="submit" className="btn btn-primary mb-2" onClick={event =>  window.location.href='/subscriptions'}>>Submit</button>
             </form>
           </section>
         )

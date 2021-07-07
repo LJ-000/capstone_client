@@ -3,11 +3,11 @@ import {Link} from 'react-router-dom'
 
 const Navbar =() => {
    
-    const [showLinks, setShowLinks] = useState(false);
+    const [showLinks] = useState(false);
     
         return (
          
-           <div className ="Navbar">
+           <div className ="navbar">
                <div className ="leftSide">
                    <div className = "links" id = {showLinks ? "hidden" : ""}>
                    <a href="/home"> Home </a>
@@ -25,6 +25,12 @@ const Navbar =() => {
                    </Link>
                    <Link to="/aboutkismet">
                    <a  href="aboutkismet"> About Kismet</a>
+                   </Link>
+                   <Link to="/login">
+                   <a  href="login"> Login</a>
+                   </Link>
+                   <Link to="/register">
+                   <a  href="register"> Register</a>
                    </Link>
                    </div>
             </div>
