@@ -1,160 +1,92 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 
 class KismetBox extends Component {
 
-}
-// import "bootstrap/dist/css/bootstrap.css";
-// import "animate.css/animate.min.css";
-// import "font-awesome/css/font-awesome.min.css";
+// state = {
+//     cards: [],
+        // quantity: [],
+        // price: [],
+        // event_name: " ",
+        // date: [],
 
-// const { getDefaultLocalization } = cartLocalization;
+//   }
 
-// // You may take localization object from wherever you want, that's just an example
-// // For more information, see localization section
-// const iPadCaseLocalization = {
-//   color: "Color",
-//   iPadCase: "iPad case",
-//   red: "Red",
-//   green: "Green",
-//   yellow: "Yellow",
-//   GBP: "£",
-//   EUR: "€",
-//   USD: "$"
-// };
+//   showCartProducts = () => {
+//     let cards = this.props.cards
+//     console.log(cards)
 
-// const iPadPropertiesWithAdditionalCostLocalization = {
-//   yellow: "Yellow (+{cost, number, CUR})"
-// };
+//     // cards.map(name => {
+//     //   <li>{event_name}</li>
+//     // })
+//   }
 
-// class App extends PureComponent {
-//   state = {
-//     products: {},
-//     product: {
-//       name: "iPadCase",
-//       id: "ipad-case",
-//       path: "/shop/ipad-case/",
-//       properties: {
-//         color: [
-//           "red",
-//           "green",
-//           {
-//             additionalCost: {
-//               GBP: 1,
-//               EUR: 2,
-//               USD: 3.5
-//             },
-//             value: "yellow"
-//           }
-//         ]
-//       },
-//       propertiesToShowInCart: ["color"],
-//       prices: { GBP: 70, EUR: 80, USD: 90 },
-//       currency: "GBP",
-//       imageSrc: "1-483x321.jpeg"
-//     },
-//     getProductLocalization: getDefaultLocalization("product", "en", {
-//       ...iPadCaseLocalization,
-//       ...iPadPropertiesWithAdditionalCostLocalization
-//     }),
-//     getCheckoutButtonLocalization: getDefaultLocalization(
-//       "checkoutButton",
-//       "en",
-//       iPadCaseLocalization
-//     ),
-//     getCartLocalization: getDefaultLocalization(
-//       "cart",
-//       "en",
-//       iPadCaseLocalization
-//     )
-//   };
+//   getCartTotal = () => {
+//     let price = this.props.cart.map(product => product[1])
 
-//   addProduct = (key, product, currency) =>
-//     void this.setState(
-//       ({
-//         products: { [key]: cartProduct = { quantity: 0 }, ...restOfProducts }
-//       }) => ({
-//         products: {
-//           ...restOfProducts,
-//           [key]: {
-//             ...product,
-//             quantity: product.quantity + cartProduct.quantity
-//           }
-//         }
-//       })
-//     );
+//     let total = price.reduce(function(a,b){
+//       return a + b
+//     }, 0)
 
-//   generateProductKey = (id, properties) =>
-//     `${id}/${Object.entries(properties).join("_")}`;
+//     return total
+//   }
 
-//   updateProduct = (key, updatedProduct) => void console.log(":)");
+//   deleteCartItem = (index) => {
+//     let deletedItem = this.props.cart.pop(index)
+//     let updatedCart = this.props.cart
+//     console.log(deletedItem)
+//     console.log(updatedCart)
+//     this.props.updateCart(updatedCart)
+//   }
 
-//   removeProduct = key => void console.log(":C");
+//   render(){
+//     return(
+//       <div className="cart-display">
 
-//   render() {
-//     const {
-//       addProduct,
-//       generateProductKey,
-//       updateProduct,
-//       removeProduct,
-//       state
-//     } = this;
+//         <h1>Customer Cart Page</h1>
+//         {/* <ul>
+//           {this.showCartProducts()}
+//         </ul> */}
+//         <h2>Items in Cart:</h2>
+//         {/* <ol className="cart-list"> 
+//           {this.props.cart.map(cartArray => (
+//           <li className="cart-list-item">
+//             {cartArray[0]} - price: ${cartArray[1]}, info: {cartArray[2]}
+//             </li>
+//           ))}
+//         </ol> */}
 
-//     const {
-//       getProductLocalization,
-//       getCheckoutButtonLocalization,
-//       getCartLocalization,
-//       products,
-//       product
-//     } = state;
+//         <ol className="cart-list"> 
+//           {this.props.cart.map((cartArray, index) => (
+//           <li className="cart-list-item">
+//             <span className="delete-cart-item-button">{cartArray[0]}<button id={+index} onClick={() => this.deleteCartItem(+index)}>X</button></span>
+//             <ul>
+//               <li>{`Price: $${cartArray[1]}`}</li>
+//               <li>{`Info: ${cartArray[2]}`}</li>
+//             </ul>
+//           </li>
+//           ))}
+//         </ol>
 
-//     const checkoutButtonElement = (
-//       <CheckoutButtonComponent
-//         grandTotal={500}
-//         hidden={false}
-//         checkoutURL="/to/my/checkout"
-//         currency="GBP"
-//         getLocalization={getCheckoutButtonLocalization}
-//       />
-//     );
-//     return (
-//       <div className="container">
-//         <ProductComponent
-//           {...product}
-//           checkoutButton={checkoutButtonElement}
-//           onAddProduct={
-//             addProduct
-//             // Help product to get into the cart
-//           }
-//           generateProductKey={
-//             generateProductKey
-//             // create product key as you wish
-//           }
-//           getLocalization={getProductLocalization}
-//         />
+//         <h2>Cart Total:</h2>
+//         <h3>${this.getCartTotal()}</h3>
+//         <h3>Number of Items: {this.props.cart.length}</h3>
 
-//         <CartComponent
-//           products={
-//             products
-//             // Provide your own product's Object(Look at Products)
-//           }
-//           onUpdateProduct={
-//             updateProduct
-//             // Update something
-//           }
-//           getLocalization={getCartLocalization}
-//           currency="GBP"
-//           onRemoveProduct={
-//             removeProduct
-//             // Remove something
-//           }
-//           checkoutButton={checkoutButtonElement}
-//           isCartEmpty={false}
-//           getLocalization={getCartLocalization}
-//         />
 //       </div>
-//     );
+//     )
 //   }
 // }
 
+//
+//         <Button onClick={() => addItem(card.id)}> Increase Quantity </Button>
+//         <Button onClick={() => removeItem(card.id)}> Decrease Quantity </Button>
+//         <Button onClick={() => removeLineItem(card.id)}> Remove from cart </Button>
 
-export default KismetBox 
+//       </div>
+//         )}
+// ;
+
+}
+export default KismetBox; 
+
+
+

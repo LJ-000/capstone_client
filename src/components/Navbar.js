@@ -8,33 +8,34 @@ const Navbar =() => {
         return (
          
            <div className ="navbar">
-               <div className ="leftSide">
-                   <div className = "links" id = {showLinks ? "hidden" : ""}>
-                   <a className = "nav_home" href="/home"> Home </a>
+                   <a className = "nav_home" href="/home"> HOME  / </a>
                    <Link to="/howitworks">
-                   <a className = "nav_how" href="howitworks"> How It Works</a>
+                   <a className = "nav_how" href="howitworks"> HOW IT WORKS  / </a>
                    </Link>
+                   
                    <Link to="/cards">
-                   <a className = "nav_cards" href="/cards"> Greeting Cards </a>
+                   <a className = "nav_cards" href="/cards"> GREETING CARDS  / </a>
                    </Link>
                    <Link to="/calendar">
-                   <a className = "nav_cal" href="/calendar"> Calendar</a>
+                   <a className = "nav_cal" href="/calendar"> MY EVENTS  / </a>
                    </Link>
+                
                    <Link to="/kismetbox">
-                   <a className = "nav_box" href="kismetbox"> Kismet Box</a>
+                   <a className = "nav_box" href="kismetbox"> KISMET BOX  / </a>
                    </Link>
+                   
                    <Link to="/aboutkismet">
-                   <a className = "nav_about" href="aboutkismet"> About Kismet</a>
+                   <a className = "nav_about" href="aboutkismet"> ABOUT KISMET  </a>
                    </Link>
+                   
                    <Link to="/login">
-                   <a className = "nav_login" href="login"> Login</a>
+                   <a className = "nav_login" href="login"> LOGIN / </a>
                    </Link>
+                   
                    <Link to="/register">
-                   <a className = "nav_register" href="register"> Register</a>
+                   <a className = "nav_register" href="register"> REGISTER </a>
                    </Link>
-                   </div>
             </div>
-           </div>
 
         );
 

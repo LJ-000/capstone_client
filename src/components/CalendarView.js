@@ -1,16 +1,22 @@
-import React, {Component} from 'react';
+import React from 'react';
 import CreateEvent from './CreateEvent';
-import SubscriptContainer from './SubscriptContainer'
+import Subscription from './Subscription'
 
-class CalendarView extends Component {
+const CalendarView = (props) => {
 
-render() {
     return (
 
 <div>
-    <CreateEvent/>
-    {/* <SubscriptContainer/> */}
+
+    {props.subscription.map(subscription =>
+    <Subscription
+    subscription={subscription}
+    key={subscription.id}
+    />)}
+
+<CreateEvent />
+    
 </div>
-    )}
-}
+)}
+
 export default CalendarView

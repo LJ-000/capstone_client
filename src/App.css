@@ -1,4 +1,9 @@
-.App {
+/* olive green = 999B84
+pinkish sand = D8AC9C
+pale pink = EFD9D1
+pinkish white = F4EEED */
+
+/* .App {
   text-align: center;
 }
 
@@ -11,7 +16,7 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;
@@ -25,53 +30,88 @@
 
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* .homepage {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvytxuev9r_orJ6FGXdDzXKHh3WaopvPcgEA&usqp=CAU");
+} */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header{
+background-color: #F4EEED;
+color: #D8AC9C;
+font-size: 25px;
+font-weight: 500;
+height: 35px;
+align-items: center;
+text-align: center;
+
+
 }
 
 .navbar{
   padding-inline-start: 5%;
+  background-color:#999B84;
+  height: 35px
+
 }
 
 .nav_home{
   padding-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
 } 
 
 .nav_how{
   padding-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
 }
 
 .nav_cards{
   padding-left: 20px;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
 }
 
 .nav_cal {
   padding-left: 20px;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
 }
 
 .nav_box{
   padding-left: 20px;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
 }
 
 .nav_about{
   padding-left: 20px;
+  padding-right: 40px;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
 }
 
 .nav_login{
   padding-left: 20px;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
 }
 
 .nav_register{
   padding-left: 20px;
+  text-decoration: none;
+
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
 }
 
 .greeting_card{
@@ -107,7 +147,7 @@
   padding-bottom: 20px;
 }
 
-
 .audience_search{
   padding-bottom: 20px;
 }
+

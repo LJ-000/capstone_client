@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 // import CreateEvent from './components/CreateEvent';
 import Login from './components/Users/Login';
 import Register from './components/Users/Register';
+import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import CardContainer from './components/CardContainer';
@@ -54,6 +55,7 @@ state = {
            
         <div className="app_container">
             <BrowserRouter>
+            <Header/>
             <Navbar/> 
             <Switch>
             <Route exact path={["/", "/home"]}>
@@ -89,7 +91,7 @@ state = {
             </Route>
             
             <Route path={["/calendar"]}>
-            <CalendarView/>
+            <CalendarView subscription={this.state.subscription}/>
             </Route>
 
             <Route path={["/aboutkismet"]}>

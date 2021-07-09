@@ -1,7 +1,6 @@
 import React from 'react'
 import { Card, CardImg, CardTitle, CardSubtitle, CardGroup, Button} from 'reactstrap';
 
-
 const GreetingCard = (props) => {
     return (
         <div className="greeting_card">
@@ -11,7 +10,11 @@ const GreetingCard = (props) => {
                 <CardTitle tag="h5">{props.card.theme}</CardTitle> 
                 <CardSubtitle tag="h6" className="mb-2 text-muted">{props.card.price}</CardSubtitle>
                 {/* <CardSubtitle tag="h6" className="mb-2 text-muted">Inside Message: {props.card.content} ? "true" Yes : "false"</CardSubtitle> */}
-                <Button onClick={event =>  window.location.href='/cards'}> Add to cart</Button>
+                
+                {/* function Card () {
+                const { addItem } = useCart()
+                <Button onClick={() => addItem(cards)}> Add to cart</Button>
+                } */}
                 </Card>
                 </CardGroup>
         </div>
