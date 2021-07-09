@@ -114,9 +114,9 @@ text-align: center;
   font-size: 18px;
 }
 
-.greeting_card{
-  margin-left: 75px;
-}
+/* .greeting_card{
+  display: grid;
+} */
 
 .message1 {
   padding-bottom: 30px;
@@ -150,4 +150,3 @@ text-align: center;
 .audience_search{
   padding-bottom: 20px;
 }
-

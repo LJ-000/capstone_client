@@ -7,7 +7,6 @@ import 'react-responsive-modal/styles.css';
 
 const subscription_url = "http://localhost:3000/api/v1/subscriptions";
 
-
 export default class CreateEvent extends Component {
 
     state = {
@@ -17,6 +16,8 @@ export default class CreateEvent extends Component {
         repeat: [],
         reminder_method: [],
         date: [],
+        // audience: "",
+        // theme: "",
         card_id: "",
         openModal : false
     };
@@ -32,6 +33,15 @@ export default class CreateEvent extends Component {
           this.state = {
             mail_by: new Date()
           }
+
+          // this.state = {
+          //   audience: audience 
+          // }
+
+          // this.state = {
+          //   theme: theme
+          // }
+
           this.handleEvent = this.handleEvent.bind(this);
           this.eventSubmit = this.eventSubmit.bind(this);
 
@@ -61,7 +71,9 @@ export default class CreateEvent extends Component {
             event_name: [],
             repeat: [],
             reminder_method: [],
-            date: []
+            date: [],
+            audience: "",
+            theme: "",
     }) 
       }) 
           }
@@ -119,12 +131,12 @@ export default class CreateEvent extends Component {
             <form onSubmit={e => this.requestToServer(e)} className="form-inline ml-4">
     
               <div className="event_name_field">
-                Give this Event a Name
+                Give this event a name
                 <input value={this.state.event_name} onChange={(e) => this.setState({ event_name: e.target.value })} type="text" className="form-control mb-2 mr-sm-2" />
               </div>
 
                <div className="event_date_field">
-                 Select Event Date
+                 Select event date
                 <DatePicker
                 selected={ this.state.date }
                 onChange={ this.handleEvent }
@@ -133,8 +145,18 @@ export default class CreateEvent extends Component {
                 />
               </div>
 
+              <div className="event_date_field">
+                 Who are we celebrating? Select your audience 
+               
+              </div>
+
+              <div className="event_date_field">
+                 Select a theme 
+    
+              </div>
+
               <div className="repeat_field">
-                Repeat Event?
+                Repeat event?
                 <select value={this.state.repeat} onChange={(e) => this.setState({ repeat: e.target.value })} >
                 <option value='' disabled selected hidden>Select</option>
                 <option value="Once">Once</option>
@@ -145,7 +167,7 @@ export default class CreateEvent extends Component {
               </div>
     
               <div className="reminder_date_field">
-                Select Date for Your Reminder
+                Add a reminder date
                 <DatePicker
                 selected={ this.state.reminder_date }
                 onChange={ this.handleReminder }
@@ -155,7 +177,7 @@ export default class CreateEvent extends Component {
               </div>
 
               <div className="mail_by_field">
-                Select Your Mail By Date 
+                Select your mail by date 
               <DatePicker
                 selected={ this.state.mail_by }
                 onChange={ this.handleMailBy }
@@ -184,7 +206,6 @@ export default class CreateEvent extends Component {
             </form>
           </section>
         )
-    
       }
     }
 

@@ -45,11 +45,10 @@ state = {
     );
 }
 
-    Logout = () => {
-        localStorage.clear()
-        }
+    // Logout = () => {
+    //     localStorage.clear()
+    //     }
  
-
         render() {
         return(
            
@@ -71,11 +70,11 @@ state = {
             </Route> 
 
             <Route exact path={["/cards"]}>
-                <CardContainer card={this.state.card}/>
+                <CardContainer card={this.state.card} />
             </Route>
 
             <Route exact path={["/kismetbox"]}>
-                <KismetBox subscription={this.state.subscription}/>
+                <KismetBox />
             </Route>
 
             <Route exact path={["/kismetbox"]}>
