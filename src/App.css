@@ -3,6 +3,15 @@ pinkish sand = D8AC9C
 pale pink = EFD9D1
 pinkish white = F4EEED */
 
+/* pink/gray envelope https://i.pinimg.com/originals/96/5b/0d/965b0d610762035d2952315568fbe300.jpg
+white gray enveleope https://i.pinimg.com/originals/41/40/cb/4140cbaa5d124f12d9c542639a436823.jpg
+https://i.pinimg.com/originals/a3/08/22/a30822c4ec5e469273ba9e9de05da4a8.jpg
+https://i.pinimg.com/originals/71/66/ba/7166baf03d78131bf6dada62d3fc2a92.jpg
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg7-Xm83F0bDx-toSHD4MgwJ-V9aOo50b9O4VaLuZIRlYd4mO8QUy8ZmnEd08EEDl6p5Y&usqp=CAU
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvPXKnd5-Cpc1oEd3CHOEd2SsdArdkrgnKi3sVyUd4q25ZBOGZlBtLL59wuJz8MJLJCf0&usqp=CAU
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL_zDOtfRpQdIr-JzVOk1ZuYoc_eAMY-9nMGZlq11mzwKo38i3hsuFCsZLTVeXu8yzcKg&usqp=CAU
+https://i.pinimg.com/originals/4f/21/4b/4f214b9fc3d02b62761e3951b4faf9c5.png */
+
 /* .App {
   text-align: center;
 }
@@ -30,9 +39,32 @@ pinkish white = F4EEED */
 
 }
 
-/* .homepage {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvytxuev9r_orJ6FGXdDzXKHh3WaopvPcgEA&usqp=CAU");
-} */
+.homepage {
+  padding: 2em; 
+  height: 130vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  background-color: #999B84;
+}
+
+.home_square{
+  padding: 2em; 
+  height: 50vh;
+  width: 60vw;
+  margin-left: auto;
+  margin-right: auto;
+  overflow:visible;
+  position: absolute;
+  background-image: url('https://i.pinimg.com/originals/a3/08/22/a30822c4ec5e469273ba9e9de05da4a8.jpg')
+}
+
+.home_quote{
+
+}
+
 
 .header{
 background-color: #F4EEED;
@@ -40,16 +72,16 @@ color: #D8AC9C;
 font-size: 25px;
 font-weight: 500;
 height: 35px;
-align-items: center;
+width: 100%;
 text-align: center;
-
 
 }
 
 .navbar{
   padding-inline-start: 5%;
   background-color:#999B84;
-  height: 35px
+  height: 35px;
+  width: 100%
 
 }
 
