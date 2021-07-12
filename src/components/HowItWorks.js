@@ -5,8 +5,10 @@ class HowItWorks extends Component {
 
     render() {
         return (
+<div>
 
-<div>How It Works Placeholder 
+<h1>How It Works</h1>
+
 <CardGroup className="text-center">
 <Card className="how_it_works_cards">  
 <CardImg className="card_img" width="7%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXXUpmHur_pr8EdheAJDVqoiqVhM_oxN5aUw&usqp=CAU"/>

@@ -11,8 +11,8 @@ import HowItWorks from './components/HowItWorks';
 import MessageIdeas from './components/MessageIdeas';
 import AboutKismet from './components/AboutKismet';
 import KismetBox from './components/KismetBox';
-import SubscriptContainer from './components/SubscriptContainer.js';
 import CalendarView from './components/CalendarView'
+import OrderConfirmation from './components/OrderConfirmation';
 
 const card_url = "http://localhost:3000/api/v1/cards";
 const subscription_url = "http://localhost:3000/api/v1/subscriptions";
@@ -29,6 +29,13 @@ state = {
     reminder_date: [],
     mail_by: [],
   };
+
+  createNew = (subscription) => this.setState({
+    subscription: [...this.state.subscription, subscription] })
+
+    // cartNew = (order) => this.setState({
+    //     order: [...this.state.order, order] })
+    
 
       componentDidMount() {
         fetch(card_url)
@@ -81,16 +88,20 @@ state = {
             </Route> 
 
             <Route exact path={["/cards"]}>
-                <CardContainer card={this.state.card} />
+                <CardContainer card={this.state.card} 
+                // sendToKismetBox={this.state.sendToKismetBox}
+                />
             </Route>
 
             <Route exact path={["/kismetbox"]}>
-                <KismetBox />
-            </Route>
-
-            <Route exact path={["/kismetbox"]}>
-                <SubscriptContainer subscription={this.state.subscription}/>
+                <KismetBox 
+                // cartNew = {this.cartNew}
+                />
             </Route> 
+
+            <Route path={["/orderconfirmation"]}>
+                <OrderConfirmation/>
+            </Route>
 
             <Route path={["/howitworks"]}>
                 <HowItWorks/>
@@ -101,7 +112,7 @@ state = {
             </Route>
             
             <Route path={["/calendar"]}>
-            <CalendarView subscription={this.state.subscription}/>
+            <CalendarView subscription={this.state.subscription} createNew = {this.createNew} />
             </Route>
 
             <Route path={["/aboutkismet"]}>

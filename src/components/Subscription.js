@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardTitle, CardSubtitle, CardGroup, CardBody} from 'reactstrap';
+import { Card, CardTitle, CardSubtitle, CardGroup, CardBody, Button} from 'reactstrap';
 
 const Subscription = (props) => {
 
@@ -13,6 +13,7 @@ const Subscription = (props) => {
             <CardBody>{props.subscription.reminder_date}</CardBody>
             <CardBody>{props.subscription.reminder_method}</CardBody>
             <CardBody>{props.subscription.repeat}</CardBody>
+            <Button className="find_cart" onClick={event =>  window.location.href='/cards'}>Find Card!</Button> 
             </Card>
             </CardGroup>
     </div>

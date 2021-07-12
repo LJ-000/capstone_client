@@ -1,21 +1,37 @@
-import React, { useState, useEffect }from 'react';
+import React from 'react';
 import { Card, CardImg, CardTitle, CardSubtitle, CardGroup, Button} from 'reactstrap';
 
 const GreetingCard = (props) => {
+// const [cardData, setcardData] = useState([
+//     {
+//         // card: [],
+//         img: "",
+//         theme: "",
+//         audience: "",
+//         price: "",
+//         quantity: 0,
+//         id: 0
+//     }
+// ]);
 
-const [cart, setCart] = useState([]);
-const [cardData] = useState([
-    {
-        card: [],
-        img: [],
-        price: [],
-        userId: [],
-        cardId: []
-        // theme: [],
-        // price: [],
-      
-    }
-]);
+return (
+            
+    <div className="greeting_card">
+        <CardGroup className="text-center">
+        <Card>  
+        <CardImg className="card_img" width="20%" src={props.card.img}/>
+        <CardTitle tag="h5">{props.card.theme}</CardTitle> 
+        <CardSubtitle tag="h6" className="mb-2 text-muted">${props.card.price}</CardSubtitle>
+        </Card>
+        </CardGroup>
+        <Button className="add-to-cart" 
+        // onClick={(cardData) => sendToKismetBox(cardData)}
+        >Add to Cart</Button> 
+    </div>
+)
+}
+
+export default GreetingCard;
 
     // const sendToKismetBox = (card) => {
     //    let newCart = [...cart];
@@ -35,69 +51,53 @@ const [cardData] = useState([
     //    setCart(newCart);
     // };
 
-    useEffect(() => { setCart(props.card)}, [props.card] )
+    // useEffect(() => { setCart(props.card)}, [props.card] )
 
-    const sendToKismetBox = cardData => config4 => {
-        const userId = cardData.user.id  
-        const currentOrder = cardData.user.current_order
-        const cardId = cardData.card.id
-        let quantity = cardData.card.quantity
-        let price = cardData.card.price         
+    // const sendToKismetBox = (cardData) => {
+    //     console.log(props)
+    //     const img = cardData.img 
+    //     const theme = cardData.theme
+    //     const price = cardData.price 
+    //     const audience = cardData.audience
+    //     const quantity = cardData.quantity
+    //     const id = cardData.id
+
+
+    //     const sendStuff = {
+    //         headers: { "Content-Type": "application/json" },
+    //         method: "POST",
+    //         body: JSON.stringify({ ...cardData })
+    //     }
+
+    //     fetch("http://localhost:3000/api/v1/orderitems", sendStuff)
+    //         .then(rsp => rsp.json())
+    //         .then((setcardData => props.cartNew(setcardData)))
+    // }
+      
+
+
+    // const sendToKismetBox = (cardData) => {
+    //     const userId = cardData.user.id  
+    //     const currentOrder = cardData.user.current_order
+    //     const cardId = cardData.card.id
+    //     let quantity = cardData.card.quantity
+    //     let price = cardData.card.price         
     
-        if (currentOrder === null) {
+        // if (currentOrder === null) {
     //         const token = localStorage.token
-            let config4 = {
-                method: "POST",
-                headers: {
-                    'Content-Type':'application/json',
-    //                 // "Authorization": token,
-                    'Accept':'application/json'
-                },
-                body: JSON.stringify({user_id: userId, card_id: cardId, quantity: quantity, price: price})
-            }
+            // const sendStuff = {
+            //     headers: { "Content-Type": "application/json" },
+            //     method: "POST",
+            //     body: JSON.stringify({ reminder_date: this.state.reminder_date, mail_by: this.state.mail_by, event_name: this.state.event_name, repeat: this.state.repeat, reminder_method: this.state.reminder_method, date: this.state.date })
+    //             headers: {
+    //                 'Content-Type':'application/json',
+    // //                 // "Authorization": token,
+    //                 'Accept':'application/json'
+            //     },
+            //     body: JSON.stringify({user_id: userId, card_id: cardId, quantity: quantity, price: price})
+            // }
             
-            fetch("http://localhost:3000/api/v1/orders/neworder", config4)
-                .then(rsp => rsp.json())
-                .then(cardData => 
-                    ({ type: "UPDATE_CURRENT_USER", current_site_user: cardData})  
-            
-                ) 
-        } else {
-    //         const token = localStorage.token
-                let config3 = {
-                    method: "POST",
-                    headers: {
-                    'Content-Type':'application/json',
-    //                 // "Authorization": token,
-                    'Accept':'application/json'
-                    },
-                    body: JSON.stringify({order_id: currentOrder, card_id: cardId, quantity: quantity})
-                }
-    
-                fetch("http://localhost:3000/api/v1/orderitems", config3)
-                    .then(rsp => rsp.json())
-                    .then(cardData => 
-                    ({ type: "UPDATE_CURRENT_USER", current_site_user: cardData}) 
-                    ) 
-            }
-        }
+         
 //     const sendToKismetBox = (cardData) => {
 // console.log(cardData)
 //     }
-        return (
-            
-            <div className="greeting_card">
-                <CardGroup className="text-center">
-                <Card>  
-                <CardImg className="card_img" width="20%" src={props.card.img}/>
-                <CardTitle tag="h5">{props.card.theme}</CardTitle> 
-                <CardSubtitle tag="h6" className="mb-2 text-muted">${props.card.price}</CardSubtitle>
-                </Card>
-                </CardGroup>
-                <Button className="add-to-cart" onClick={()=>sendToKismetBox(cardData)}>Add to Cart</Button> 
-            </div>
-            
-        )
-    }
-
-export default GreetingCard;

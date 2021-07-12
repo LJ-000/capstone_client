@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { Modal } from 'react-responsive-modal';
+// import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
 
 const subscription_url = "http://localhost:3000/api/v1/subscriptions";
@@ -12,126 +12,61 @@ export default class CreateEvent extends Component {
         reminder_date: new Date(),
         mail_by: new Date(),
         event_name: "",
-        repeat: [],
-        reminder_method: [],
+        repeat: "",
+        reminder_method: "",
         date: new Date(),
-        audience: [],
-        theme: [],
-        card_id: "",
-        openModal : false
+        // audience: "",
+        // theme: "",
+        // openModal : false
     };
-
-    // constructor (props) {
-    //       super(props)
-    //       this.state = {
-    //         date: new Date()
-    //       };
-    //       this.state = {
-    //         reminder_date: new Date()
-    //       };
-    //       this.state = {
-    //         mail_by: new Date()
-    //       }
-
-          // this.state = {
-          //   audience: audience 
-          // }
-
-          // this.state = {
-          //   theme: theme
-          // }
-
-        //   this.handleEvent = this.handleEvent.bind(this);
-        //   this.eventSubmit = this.eventSubmit.bind(this);
-
-        //   this.handleReminder = this.handleReminder.bind(this);
-        //   this.reminderSubmit = this.reminderSubmit.bind(this);
-
-        //   this.handleMailBy = this.handleMailBy.bind(this);
-        //   this.mailSubmit = this.mailSubmit.bind(this);
-
-        //   this.handleEventName = this.handleEventName.bind(this);
-        //   this.eventNameSubmit = this.eventNameSubmit.bind(this);
-
-        //   this.handleTheme = this.handleTheme.bind(this);
-        //   this.themeSubmit = this.themeSubmit.bind(this);
-
-        //   this.handleAudience = this.handleAudience.bind(this);
-        //   this.audienceSubmit = this.audienceSubmit.bind(this);
-  
-      
-        // }
-
 
 
       requestToServer = (e) => {
         e.preventDefault()
-        const reqObj = {}
-          reqObj.headers = { "Content-Type": "application/json" }
-          reqObj.method = "POST"
-          reqObj.body = JSON.stringify({ ...this.state })
-        
-    
+        const reqObj = {
+          headers: { "Content-Type": "application/json" },
+          method: "POST",
+          body: JSON.stringify({ reminder_date: this.state.reminder_date, mail_by: this.state.mail_by, event_name: this.state.event_name, repeat: this.state.repeat, reminder_method: this.state.reminder_method, date: this.state.date })
+        }
+        // audience: this.state.audience, theme: this.state.theme
         fetch(subscription_url, reqObj)
           .then(res => res.json())
-          .then((newSubscription) => {
-            this.props.createNew(newSubscription)
-            this.setState({
-            reminder_date: [],
-            mail_by: [],
-            event_name: "",
-            repeat: [],
-            reminder_method: [],
-            date: [],
-            audience: [],
-            theme: [],
-    }) 
-      }) 
-          }
+          .then((subscription => this.props.createNew(subscription)))
 
-//       handleEventName(event_name) {
-//           this.setState({
-//           event_name: event_name
-//           })
-//     }
-      
-//       eventNameSubmit(e) {
-//           e.preventDefault();
-//           console.log(this.state.event_name)
-//     }
+      }
 
-//       handleEvent(date) {
-//         this.setState({
-//         date: date
-//       })
-//     }
+      handleEvent(date) {
+        this.setState({
+        date: date
+      })
+    }
   
-//       eventSubmit(e) {
-//         e.preventDefault();
-//         console.log(this.state.event_date)
-//     }
+      eventSubmit(e) {
+        e.preventDefault();
+        console.log(this.state.date)
+    }
 
-//       handleReminder(reminder_date) {
-//         this.setState({
-//         reminder_date: reminder_date
-//       })
-//     }
+      handleReminder(reminder_date) {
+        this.setState({
+        reminder_date: reminder_date
+      })
+    }
   
-//       reminderSubmit(e) {
-//         e.preventDefault();
-//         console.log(this.state.reminder_date)
-//     }
+      reminderSubmit(e) {
+        e.preventDefault();
+        console.log(this.state.reminder_date)
+    }
 
-//       handleMailBy(mail_by) {
-//         this.setState({
-//         mail_by: mail_by
-//       })
-//     }
+      handleMailBy(mail_by) {
+        this.setState({
+        mail_by: mail_by
+      })
+    }
   
-//       mailSubmit(e) {
-//         e.preventDefault();
-//         console.log(this.state.mail_by)
-//     }
+      mailSubmit(e) {
+        e.preventDefault();
+        console.log(this.state.mail_by)
+    }
 
 
 //     handleTheme(theme) {
@@ -157,14 +92,14 @@ export default class CreateEvent extends Component {
 // }
 
   
-        onClickButton = e =>{
-            e.preventDefault()
-            this.setState({openModal : true})
-        }
+        // onClickButton = e =>{
+        //     e.preventDefault()
+        //     this.setState({openModal : true})
+        // }
     
-        onCloseModal = ()=>{
-            this.setState({openModal : false})
-        }
+        // onCloseModal = ()=>{
+        //     this.setState({openModal : false})
+        // }
     
 
       render() {
@@ -183,14 +118,14 @@ export default class CreateEvent extends Component {
                <div className="event_date_field">
                  Select event date
                 <DatePicker
-                selected={ this.state.date }
-                // onChange={ this.handleEvent }
+                selected={ this.state.date } 
+                onChange={ this.handleEvent.bind(this) }
                 name="event_date"
                 dateFormat="MM/dd/yyyy"
                 />
               </div>
 
-              <div className="audience_field">
+              {/* <div className="audience_field">
                  Who are we celebrating? Select your audience 
                  <select value={this.state.audience} onChange={(e) => this.setState({ audience: e.target.value })} >
                 <option value='' disabled selected hidden>Select</option>
@@ -213,9 +148,9 @@ export default class CreateEvent extends Component {
                 <option value="GodFather">GodFather</option>
                 <option value="Teacher">Teacher</option>
                 </select>
-              </div>
+              </div> */}
 
-              <div className="theme_field">
+              {/* <div className="theme_field">
                  Select a theme 
                 <select value={this.state.theme} onChange={(e) => this.setState({ theme: e.target.value })} >
                 <option value='' disabled selected hidden>Select</option>
@@ -229,7 +164,7 @@ export default class CreateEvent extends Component {
                 <option value="Invitation">Invitation</option>
                 <option value="Housewarming">Housewarming</option>
                 </select>
-              </div>
+              </div> */}
 
               <div className="repeat_field">
                 Repeat event?
@@ -244,8 +179,8 @@ export default class CreateEvent extends Component {
               <div className="reminder_date_field">
                 Add a reminder date
                 <DatePicker
-                selected={ this.state.reminder_date }
-                // onChange={ this.handleReminder }
+                selected={ this.state.reminder_date } 
+                onChange={ this.handleReminder.bind(this)  }
                 name="event_date"
                 dateFormat="MM/dd/yyyy"
                 />
@@ -254,8 +189,8 @@ export default class CreateEvent extends Component {
               <div className="mail_by_field">
                 Select your mail by date 
               <DatePicker
-                selected={ this.state.mail_by }
-                // onChange={ this.handleMailBy }
+                selected={ this.state.mail_by } 
+                onChange={ this.handleMailBy.bind(this)  }
                 name="event_date"
                 dateFormat="MM/dd/yyyy"
                 />
@@ -263,56 +198,23 @@ export default class CreateEvent extends Component {
 
               <div className="delivery_method_field">
                 Choose a delivery method
-                <select value={this.state.reminder_method} onChange={(e) => this.setState({ reminder_method: e.target.value })} >
+                <select value={this.state.delivery_method} onChange={(e) => this.setState({ reminder_method: e.target.value })} >
                 <option value='' disabled selected hidden>Select</option>
                 <option value="Mail">Mail</option>
                 <option value="Hand Delivery">Hand Delivery</option>
                 </select>
               </div>
 
-              <button onClick={this.onClickButton}>Submit Event</button>
+              <button type="submit" onSubmit={event =>  window.location.href='/calendar'}>Submit Event</button>
               <div>
-              <Modal open={this.state.openModal} onClose={this.onCloseModal}>
+              {/* <Modal open={this.state.openModal} onClose={this.onCloseModal}>
                 <h1>Your New Event Was Added!</h1>
                 <button onClick={event =>  window.location.href='/cards'}>Find the Perfect Card!</button>
                 <button onClick={event =>  window.location.href='/calendar'}>Review My Calendar!</button>
-              </Modal>   
+              </Modal>    */}
               </div>
             </form>
           </section>
         )
       }
     }
-
-    // import React, { Component } from 'react'
-    // import { Modal } from 'react-responsive-modal';
-    // import 'react-responsive-modal/styles.css';
-    
-    // class ModalInClassComponents extends Component {
-    
-    //     state={
-    //         openModal : false
-    //     }
-    
-    //     onClickButton = e =>{
-    //         e.preventDefault()
-    //         this.setState({openModal : true})
-    //     }
-    
-    //     onCloseModal = ()=>{
-    //         this.setState({openModal : false})
-    //     }
-    
-    //     render() {
-    //         return (
-    //             <div>
-    //                 <button onClick={this.onClickButton}>Click Me</button>
-    //                 <Modal open={this.state.openModal} onClose={this.onCloseModal}>
-    //                     <h1>You Did it!</h1>
-    //                 </Modal>   
-    //             </div>
-    //         )
-    //     }  
-    // }
-    
-    // export default ModalInClassComponents;

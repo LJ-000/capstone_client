@@ -15,7 +15,7 @@ const CalendarView = (props) => {
     key={subscription.id}
     />)}
 
-<CreateEvent />
+<CreateEvent createNew = {props.createNew}/>
     
 </div>
 )}

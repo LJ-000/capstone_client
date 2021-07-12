@@ -61,10 +61,6 @@ https://i.pinimg.com/originals/4f/21/4b/4f214b9fc3d02b62761e3951b4faf9c5.png */
   background-image: url('https://i.pinimg.com/originals/a3/08/22/a30822c4ec5e469273ba9e9de05da4a8.jpg')
 }
 
-.home_quote{
-
-}
-
 
 .header{
 background-color: #F4EEED;
@@ -181,4 +177,72 @@ text-align: center;
 
 .audience_search{
   padding-bottom: 20px;
+}
+
+.login_page{
+background-image: url("https://wallpaperaccess.com/full/3693524.jpg");
+background-size:50%;
+height: 90vh;
+margin-top: -25px;
+padding-left: 400px;
+background-repeat: no-repeat;
+background-color: #EFD9D1;
+}
+
+.login_header{
+padding-top: 70px;
+padding-left: 300px;
+font-size: 30px;
+}
+
+.login_subheader{
+padding-top: 10px;
+padding-left: 300px;
+font-size: 20px;
+}
+
+.credentials{
+  padding-top: 10px;
+  padding-left: 300px;
+  font-size: 20px;
+}
+
+.username::after{
+padding-right: 15px;
+content: "\a";
+white-space: pre;
+}
+
+.password::before{
+  padding-right: 15px;
+  content: "\a";
+  white-space: pre;
+}
+
+.password::after{
+  content: "\a";
+  white-space: pre;
+}
+
+.username2::after{
+  padding-right: 15px;
+  content: "\a";
+  white-space: pre;
+  }
+  
+  .password2::after{
+    padding-right: 15px;
+    content: "\a";
+    white-space: pre;
+  }
+
+.login_button::before{
+  padding-right: 15px;
+  content: "\a";
+
+}
+
+.login_button::after{
+  padding-right: 15px;
+  content: "\a";
 }

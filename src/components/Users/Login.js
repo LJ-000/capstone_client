@@ -21,16 +21,17 @@ const Login = () => {
         // }
 
 return(
-    <div>
-        <h2>Welcome back - Login</h2>
-        <p> 
+    <div className="login_page">
+        <h2 className="login_header">Welcome Back</h2>
+        <h2 className="login_subheader">send a card, make someone's day</h2>
+        <p className="credentials"> 
         {/* // onSubmit={(e) => logIn(e) } Login> */}
-        <label>Username</label>
-        <input name="username" type="text"/>
-        <label>Password</label>
-        <input name="password" type="password"/>
+        <label className="username">Username</label>
+        <input className="username2" name="username" type="text"/>
+        <label className="password">Password</label>
+        <input className="password2" name="password" type="password"/>
         {/* <input type="submit"/> */}
-        <button onClick={event =>  window.location.href='/calendar'}>Login</button>
+        <button className="login_button" onClick={event =>  window.location.href='/calendar'}>Login</button>
         </p>
     </div>
 )}
