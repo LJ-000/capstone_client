@@ -44,14 +44,31 @@ import React, { Component } from 'react';
 //     }
 
 class KismetBox extends Component {
+
+    state = {
+        card: [],
+        subscription: [],
+        reminder_date: [],
+        mail_by: [],
+      };
+    
+        componentDidMount() {
+            fetch("http://localhost:3000/api/v1/orderitems")
+                    .then(res => res.json())
+                    .then(data => this.setState({
+                    card: data
+                    })
+                    )
+                }
+
     render() {
         return (
     
     <div>Cart</div>
-    )
-}
-}
-    export default KismetBox; 
+    )}
+    }
+        
+export default KismetBox; 
 
 
 

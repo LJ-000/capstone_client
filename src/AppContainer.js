@@ -16,6 +16,7 @@ import CalendarView from './components/CalendarView'
 
 const card_url = "http://localhost:3000/api/v1/cards";
 const subscription_url = "http://localhost:3000/api/v1/subscriptions";
+const order_url = "http://localhost:3000/api/v1/orders";
 
 
 class AppContainer extends Component {
@@ -23,6 +24,8 @@ class AppContainer extends Component {
 state = {
     card: [],
     subscription: [],
+    order: [],
+    order_item: [],
     reminder_date: [],
     mail_by: [],
   };
@@ -40,6 +43,14 @@ state = {
         .then(res => res.json())
         .then(data => this.setState({
             subscription: data,   
+}
+)
+    );
+
+    fetch(order_url)
+    .then(res => res.json())
+    .then(data => this.setState({
+        order: data,   
 }
 )
     );

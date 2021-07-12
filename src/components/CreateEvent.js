@@ -9,29 +9,29 @@ const subscription_url = "http://localhost:3000/api/v1/subscriptions";
 export default class CreateEvent extends Component {
 
     state = {
-        reminder_date: [],
-        mail_by: [],
-        event_name: [],
+        reminder_date: new Date(),
+        mail_by: new Date(),
+        event_name: "",
         repeat: [],
         reminder_method: [],
-        date: [],
-        // audience: "",
-        // theme: "",
+        date: new Date(),
+        audience: [],
+        theme: [],
         card_id: "",
         openModal : false
     };
 
-    constructor (props) {
-          super(props)
-          this.state = {
-            date: new Date()
-          };
-          this.state = {
-            reminder_date: new Date()
-          };
-          this.state = {
-            mail_by: new Date()
-          }
+    // constructor (props) {
+    //       super(props)
+    //       this.state = {
+    //         date: new Date()
+    //       };
+    //       this.state = {
+    //         reminder_date: new Date()
+    //       };
+    //       this.state = {
+    //         mail_by: new Date()
+    //       }
 
           // this.state = {
           //   audience: audience 
@@ -41,16 +41,28 @@ export default class CreateEvent extends Component {
           //   theme: theme
           // }
 
-          this.handleEvent = this.handleEvent.bind(this);
-          this.eventSubmit = this.eventSubmit.bind(this);
+        //   this.handleEvent = this.handleEvent.bind(this);
+        //   this.eventSubmit = this.eventSubmit.bind(this);
 
-          this.handleReminder = this.handleReminder.bind(this);
-          this.reminderSubmit = this.reminderSubmit.bind(this);
+        //   this.handleReminder = this.handleReminder.bind(this);
+        //   this.reminderSubmit = this.reminderSubmit.bind(this);
 
-          this.handleMailBy = this.handleMailBy.bind(this);
-          this.mailSubmit = this.mailSubmit.bind(this);
+        //   this.handleMailBy = this.handleMailBy.bind(this);
+        //   this.mailSubmit = this.mailSubmit.bind(this);
+
+        //   this.handleEventName = this.handleEventName.bind(this);
+        //   this.eventNameSubmit = this.eventNameSubmit.bind(this);
+
+        //   this.handleTheme = this.handleTheme.bind(this);
+        //   this.themeSubmit = this.themeSubmit.bind(this);
+
+        //   this.handleAudience = this.handleAudience.bind(this);
+        //   this.audienceSubmit = this.audienceSubmit.bind(this);
+  
       
-        }
+        // }
+
+
 
       requestToServer = (e) => {
         e.preventDefault()
@@ -67,48 +79,82 @@ export default class CreateEvent extends Component {
             this.setState({
             reminder_date: [],
             mail_by: [],
-            event_name: [],
+            event_name: "",
             repeat: [],
             reminder_method: [],
             date: [],
-            audience: "",
-            theme: "",
+            audience: [],
+            theme: [],
     }) 
       }) 
           }
 
-      handleEvent(date) {
-        this.setState({
-        date: date
-      })
-    }
-  
-      eventSubmit(e) {
-        e.preventDefault();
-        console.log(this.state.event_date)
-    }
+//       handleEventName(event_name) {
+//           this.setState({
+//           event_name: event_name
+//           })
+//     }
+      
+//       eventNameSubmit(e) {
+//           e.preventDefault();
+//           console.log(this.state.event_name)
+//     }
 
-      handleReminder(date) {
-        this.setState({
-        reminder_date: date
-      })
-    }
+//       handleEvent(date) {
+//         this.setState({
+//         date: date
+//       })
+//     }
   
-      reminderSubmit(e) {
-        e.preventDefault();
-        console.log(this.state.reminder_date)
-    }
+//       eventSubmit(e) {
+//         e.preventDefault();
+//         console.log(this.state.event_date)
+//     }
 
-      handleMailBy(date) {
-        this.setState({
-        mail_by: date
-      })
-    }
+//       handleReminder(reminder_date) {
+//         this.setState({
+//         reminder_date: reminder_date
+//       })
+//     }
   
-      mailSubmit(e) {
-        e.preventDefault();
-        console.log(this.state.mail_by)
-    }
+//       reminderSubmit(e) {
+//         e.preventDefault();
+//         console.log(this.state.reminder_date)
+//     }
+
+//       handleMailBy(mail_by) {
+//         this.setState({
+//         mail_by: mail_by
+//       })
+//     }
+  
+//       mailSubmit(e) {
+//         e.preventDefault();
+//         console.log(this.state.mail_by)
+//     }
+
+
+//     handleTheme(theme) {
+//       this.setState({
+//       theme: theme
+//     })
+//   }
+
+//     themeSubmit(e) {
+//       e.preventDefault();
+//       console.log(this.state.theme)
+//   }
+
+//     handleAudience(audience) {
+//       this.setState({
+//       audience: audience
+//   })
+// }
+
+//     audienceSubmit(e) {
+//       e.preventDefault();
+//       console.log(this.state.audience)
+// }
 
   
         onClickButton = e =>{
@@ -127,7 +173,7 @@ export default class CreateEvent extends Component {
             <div>
               <h2 className="add_new"> Add New Event</h2>
             </div>
-            <form onSubmit={e => this.requestToServer(e)} className="form-inline ml-4">
+            <form onSubmit={this.requestToServer} >
     
               <div className="event_name_field">
                 Give this event a name
@@ -138,20 +184,51 @@ export default class CreateEvent extends Component {
                  Select event date
                 <DatePicker
                 selected={ this.state.date }
-                onChange={ this.handleEvent }
+                // onChange={ this.handleEvent }
                 name="event_date"
                 dateFormat="MM/dd/yyyy"
                 />
               </div>
 
-              <div className="event_date_field">
+              <div className="audience_field">
                  Who are we celebrating? Select your audience 
-               
+                 <select value={this.state.audience} onChange={(e) => this.setState({ audience: e.target.value })} >
+                <option value='' disabled selected hidden>Select</option>
+                <option value="Anyone">Anyone</option>
+                <option value="Significant Other">Significant Other</option>
+                <option value="Wife">Wife</option>
+                <option value="Husband">Husband</option>
+                <option value="Friend">Friend</option>
+                <option value="Sister">Sister</option>
+                <option value="Brother">Brother</option>
+                <option value="Mom">Mom</option>
+                <option value="Dad">Dad</option>
+                <option value="Grandma">Grandma</option>
+                <option value="Grandpa">Grandpa</option>
+                <option value="StepMom">StepMom</option>
+                <option value="StepDad">StepDad</option>
+                <option value="Aunt">Aunt</option>
+                <option value="Uncle">Uncle</option>
+                <option value="GodMother">GodMother</option>
+                <option value="GodFather">GodFather</option>
+                <option value="Teacher">Teacher</option>
+                </select>
               </div>
 
-              <div className="event_date_field">
+              <div className="theme_field">
                  Select a theme 
-    
+                <select value={this.state.theme} onChange={(e) => this.setState({ theme: e.target.value })} >
+                <option value='' disabled selected hidden>Select</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Encouragement">Encouragement</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Anniversary">Anniversary</option>
+                <option value="Thank You">Thank You</option>
+                <option value="Get Well">Get Well</option>
+                <option value="Congratulations">Congratulations</option>
+                <option value="Invitation">Invitation</option>
+                <option value="Housewarming">Housewarming</option>
+                </select>
               </div>
 
               <div className="repeat_field">
@@ -161,7 +238,6 @@ export default class CreateEvent extends Component {
                 <option value="Once">Once</option>
                 <option value="Every Month">Every Month</option>
                 <option value="Every Year">Every Year</option>
-                <option value="Custom">Custom</option>
                 </select>
               </div>
     
@@ -169,7 +245,7 @@ export default class CreateEvent extends Component {
                 Add a reminder date
                 <DatePicker
                 selected={ this.state.reminder_date }
-                onChange={ this.handleReminder }
+                // onChange={ this.handleReminder }
                 name="event_date"
                 dateFormat="MM/dd/yyyy"
                 />
@@ -179,7 +255,7 @@ export default class CreateEvent extends Component {
                 Select your mail by date 
               <DatePicker
                 selected={ this.state.mail_by }
-                onChange={ this.handleMailBy }
+                // onChange={ this.handleMailBy }
                 name="event_date"
                 dateFormat="MM/dd/yyyy"
                 />
