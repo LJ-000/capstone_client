@@ -22,15 +22,20 @@ const Register = () => {
     
 
 return(
-    <div>
-        <h2>Register New Profile</h2>
-        <form>
+    <div className="login_page">
+        <h2 className="login_header">Register New Profile</h2>
+        <br /> 
+        <br /> 
+        <form className="credentials">
         {/* // onSubmit={(e) => signUp(e) }> */}
-        <label>Username</label>
-        <input name="username" type="text"/>
-        <label>Password</label>
-        <input name="password" type="password"/>
-        <input type="submit"/>
+        <label className="username">Username</label>
+        <input className="username2" name="username" type="text"/>
+        <br /> 
+        <label className="password">Password</label>
+        <input className="password2" name="password" type="password"/>
+        <br /> 
+        <br /> 
+        <input className="login_button" type="submit"/>
         </form>
     </div>
 )}
