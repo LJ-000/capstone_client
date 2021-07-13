@@ -6,32 +6,34 @@ const Navbar =() => {
         return (
          
            <div className ="navbar">
-                   <a className = "nav_home" href="/home"> HOME  / </a>
-                   <Link to="/howitworks">
-                   <a className = "nav_how" href="howitworks"> HOW IT WORKS  / </a>
+                   <a className = "nav_home" href="/home"> HOME   / </a>
+                    
+                   <Link className = "nav_how" to="/howitworks" href="howitworks"> 
+                   HOW IT WORKS   / 
                    </Link>
                    
-                   <Link to="/cards">
-                   <a className = "nav_cards" href="/cards"> GREETING CARDS  / </a>
+                   <Link to="/cards" className = "nav_cards" href="/cards">
+                   GREETING CARDS   / 
                    </Link>
-                   <Link to="/calendar">
-                   <a className = "nav_cal" href="/calendar"> MY EVENTS  / </a>
+
+                   <Link to="/calendar" className = "nav_cal" href="/calendar"> 
+                   MY EVENTS   / 
                    </Link>
                 
-                   <Link to="/kismetbox">
-                   <a className = "nav_box" href="kismetbox"> KISMET BOX  / </a>
+                   <Link to="/kismetbox" className = "nav_box" href="kismetbox"> 
+                   KISMET BOX   / 
                    </Link>
                    
-                   <Link to="/aboutkismet">
-                   <a className = "nav_about" href="aboutkismet"> ABOUT KISMET  </a>
+                   <Link to="/aboutkismet" className = "nav_about" href="aboutkismet"> 
+                   ABOUT KISMET  
                    </Link>
                    
-                   <Link to="/login">
-                   <a className = "nav_login" href="login"> LOGIN / </a>
+                   <Link to="/login" className = "nav_login" href="login"> 
+                   LOGIN   / 
                    </Link>
                    
-                   <Link to="/register">
-                   <a className = "nav_register" href="register"> REGISTER </a>
+                   <Link to="/register" className = "nav_register" href="register"> 
+                   REGISTER 
                    </Link>
             </div>
 

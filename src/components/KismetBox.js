@@ -1,5 +1,5 @@
 import React from 'react';
-// import OrderCards from './OrderCards'
+import OrderCards from './OrderCards'
 
 // const order_url = "http://localhost:3000/api/v1/orders";
 const KismetBox = (props) => {
