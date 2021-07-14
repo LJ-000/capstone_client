@@ -13,7 +13,7 @@ https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvPXKnd5-Cpc1oEd3CHOEd2Ssd
 https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL_zDOtfRpQdIr-JzVOk1ZuYoc_eAMY-9nMGZlq11mzwKo38i3hsuFCsZLTVeXu8yzcKg&usqp=CAU
 https://i.pinimg.com/originals/4f/21/4b/4f214b9fc3d02b62761e3951b4faf9c5.png */
 
-
+/* 
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -23,41 +23,42 @@ https://i.pinimg.com/originals/4f/21/4b/4f214b9fc3d02b62761e3951b4faf9c5.png */
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 /* //HOMEPAGE  */
 
 .homepage {
-  /* background-image: url("https://i.pinimg.com/originals/8e/06/ea/8e06ea83cb664d889cc799b5d72f8330.jpg"); */
-  padding: 2em; 
-  padding-left: 200px;
-  height: 80vh;
-  width: 95%;
-  background-position: cover;
-  position: center;
-  background-color: #c1c5b5;
-}
-
-.home_img{
+  background-image: url("https://i.pinimg.com/originals/8e/06/ea/8e06ea83cb664d889cc799b5d72f8330.jpg");
+  height: 90vh;
+  margin-top: -7px;
+  width: 600px;
   background-repeat: no-repeat;
-  opacity: 0.9;
-  width: 80%;
-  height: 600px;
-  margin-top: -35px;
-  margin-left: -50px;
+  display:-ms-flexbox;
+  justify-content: center;
+  border-color: #F9EADD  ;
+  border-style: solid;
+  border-left-width: 320px;
+  border-right-width: 350px;
+  border-bottom-width: 20px;
+  color: #2e3336;
+  font-family: Poppins;
+
+  /* background-color: #c1c5b5; */
 }
 
 .home_1{
-margin-top: -500px;
+margin-top: 30px;
+font-family: Poppins;
+
 }
 
 .home_2{
-  margin-top: -200px;
+  margin-top: 30px;
 
 }
 
 .home_3{
-  margin-top: -100px;
+  margin-top: 30px;
 
 }
 
@@ -65,12 +66,12 @@ margin-top: -500px;
   background-image: linear-gradient(to right, #D8AC9C 0%, #2e5881 40%, #999B84 100%);
   color: #e2c5bb;
   font-size: 25px;
-  font-weight: 600;
-  height: 55px;
-  width: 100%;
+  font-weight: 500;
+  height: 40px;
+  width: 150%;
   display: inline-block;
-  margin-left: -200px;
-  margin-top: 200px;
+  margin-left: -140px;
+  margin-top: 150px;
   text-align: center;
 }
 
@@ -289,7 +290,7 @@ font-family: sans-serif;
 /* //HOW IT WORKS  */
 
 .how_it_works_page{
-background-image: linear-gradient(to right, #e0c3b9 0%, #999B84 60%, #EFD9D1 100%);
+background-image: linear-gradient(to right, #EFD9D1 0%, #aaac98 40%, #EFD9D1 100%);
 padding-top: 10px;
 padding-left: 120px;
 display: grid;
@@ -348,3 +349,23 @@ width: 100%
   display: grid;
   grid-template: 150px / auto auto auto;
 }
+
+/* //ABOUT KISMET */
+
+.about_kismet{
+  background-image: url("https://i.pinimg.com/originals/8e/06/ea/8e06ea83cb664d889cc799b5d72f8330.jpg");
+  background-size:50%;
+  height: 90vh;
+  margin-top: -25px;
+  padding-left: 450px;
+  background-repeat: no-repeat;
+  background-color: #EFD9D1;
+  }
+
+  .about_info{
+    padding-top: 90px;
+    padding-left: 210px;
+    font-size: 25px;
+    font-family: Raleway;
+    color:#50575C
+    }
