@@ -25,13 +25,20 @@ const CardContainer = (props) => {
 
 
         return (
-            <div>
-                <h3>Kismet Greeting Cards</h3>
-                <button onClick={event =>  window.location.href='/kismetbox'}> Checkout</button>
+            <div className="card_container">
+                {/* <h3>Kismet Greeting Cards</h3> */}
+                <br /> 
+                <br /> 
+
+                <button className="checkout_button" onClick={event =>  window.location.href='/kismetbox'}> Checkout</button>
+                <p className="card_filters">
                 <ThemeSearch filterChange = {filterChange} />
                 <AudienceSearch filterAudience = {filterAudience} />
-                {/* <ContentSearch/> */}
-                <p>
+                </p>
+                <br /> 
+                <br /> 
+                <br /> 
+                <p className="greeting_card">
                 {cards.map(card =>
                 <GreetingCard
                 card={card}

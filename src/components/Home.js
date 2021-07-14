@@ -7,8 +7,9 @@ class Home extends Component {
             <div className="homepage">
             <p className="home_sqaure">
             {/* <img className="home_img" src= 'https://i.pinimg.com/originals/8e/06/ea/8e06ea83cb664d889cc799b5d72f8330.jpg'/> */}
+            <br /> 
             <h1 className="home_1">Welcome to Kismet</h1>
-            <br />  <br /> 
+            <br />   
             <h3 className="home_2">Birthdays, weddings, anniversaries, graduations 
             <br /> 
             Select the perfect card for every event

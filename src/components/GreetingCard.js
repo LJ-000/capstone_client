@@ -39,12 +39,12 @@ const GreetingCard = (props) => {
 return (
             
     <div>
-        <CardGroup className="greeting_card">
+        <CardGroup>
         <Card>  
         <CardImg className="card_img" width="20%" src={props.card.img}/>
-        <CardTitle tag="h5">{props.card.theme}</CardTitle> 
-        <CardSubtitle tag="h6" className="mb-2 text-muted">${props.card.price}</CardSubtitle>
-        <Button className="add-to-cart" 
+        <CardTitle className="card_title" tag="h5">{props.card.theme}</CardTitle> 
+        <CardSubtitle tag="h5" className="card_price">${props.card.price}</CardSubtitle>
+        <Button className="add_to_cart" onClick={event =>  window.location.href='/kismetbox'}
         // onClick={(cardData) => sendToKismetBox(cardData)}
         >Add to Cart</Button> 
         </Card>

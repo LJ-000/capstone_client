@@ -10,9 +10,10 @@ render() {
     Kismet was created by a super cool person <br /> who doesn't have time to work on this page more
     <br />  
     <br /> 
+    <br /> 
+
     Contact Us 
     <br /> 
-    <img width="70px" src = "https://cdn.dribbble.com/users/4874/screenshots/2031709/messageincoming.gif"/>
      </p> 
     </div>
 
