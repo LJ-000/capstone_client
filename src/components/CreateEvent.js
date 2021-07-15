@@ -111,10 +111,10 @@ export default class CreateEvent extends Component {
             <form onSubmit={this.requestToServer} >
     
               <div className="event_name_field">
-                Give this event a name
+                Name your event
                 <input value={this.state.event_name} onChange={(e) => this.setState({ event_name: e.target.value })} type="text" className="form-control mb-2 mr-sm-2" />
               </div>
-
+              <br />
                <div className="event_date_field">
                  Select event date
                 <DatePicker
@@ -124,7 +124,7 @@ export default class CreateEvent extends Component {
                 dateFormat="MM/dd/yyyy"
                 />
               </div>
-
+              <br />
               {/* <div className="audience_field">
                  Who are we celebrating? Select your audience 
                  <select value={this.state.audience} onChange={(e) => this.setState({ audience: e.target.value })} >
@@ -175,7 +175,7 @@ export default class CreateEvent extends Component {
                 <option value="Every Year">Every Year</option>
                 </select>
               </div>
-    
+              <br />
               <div className="reminder_date_field">
                 Add a reminder date
                 <DatePicker
@@ -185,7 +185,7 @@ export default class CreateEvent extends Component {
                 dateFormat="MM/dd/yyyy"
                 />
               </div>
-
+              <br />
               <div className="mail_by_field">
                 Select your mail by date 
               <DatePicker
@@ -195,7 +195,7 @@ export default class CreateEvent extends Component {
                 dateFormat="MM/dd/yyyy"
                 />
               </div>
-
+              <br />
               <div className="delivery_method_field">
                 Choose a delivery method
                 <select value={this.state.delivery_method} onChange={(e) => this.setState({ reminder_method: e.target.value })} >
@@ -204,8 +204,8 @@ export default class CreateEvent extends Component {
                 <option value="Hand Delivery">Hand Delivery</option>
                 </select>
               </div>
-
-              <button type="submit" onSubmit={event =>  window.location.href='/calendar'}>Submit Event</button>
+              <br />
+              <button type="submit" onClick={event =>  window.location.href='/cards'}>Submit Event</button>
               <div>
               {/* <Modal open={this.state.openModal} onClose={this.onCloseModal}>
                 <h1>Your New Event Was Added!</h1>

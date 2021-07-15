@@ -7,7 +7,7 @@ const CalendarView = (props) => {
     return (
 
 <div className="calendar_page">
-    <p>
+    <p className="calendar_greeting"> 
     Welcome back, Laura! Who are we celebrating?
     <br /> 
     Update your calendar with upcoming events!

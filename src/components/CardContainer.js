@@ -19,10 +19,7 @@ const CardContainer = (props) => {
             setCards(filteredAudience)
             return filteredAudience
     }
-
     useEffect(() => { setCards(props.card)}, [props.card] )
-
-
 
         return (
             <div className="card_container">

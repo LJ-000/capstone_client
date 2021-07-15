@@ -30,37 +30,36 @@ https://i.pinimg.com/originals/4f/21/4b/4f214b9fc3d02b62761e3951b4faf9c5.png */
 
 .homepage {
   /* background-image: linear-gradient(to right, #D8AC9C -5%, #EFD9D1 10%, #d1e1f1 30%, #747561 120%); */
-  height: 100vh;
+  height: 90vh;
   margin-top: -20px;
   font-family: sans-serif;
   font-size: 20px;
-  color: white;
+  color: #143555;
   text-align: center;
   justify-content: center;
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-image: url("https://images.unsplash.com/photo-1526566762798-8fac9c07aa98?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHN0YXRpb25lcnl8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80");
+  background-repeat:round;
+  background-image: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F23%2F2014%2F04%2F28%2Foffice-desk-accessories-0120wwo.jpg&q=85");
   background-size: cover;
-  opacity: 0.9;
+  background-color: #E7E7E7;
+  /* padding-left:90px; */
 }
 
 .home_1{
-  font-size: 90px;
+  font-size: 100px;
   font-weight: 500;
   padding-top: 20px;
 	overflow-x: hidden;
 	place-items: center;
 		font-weight: 600;
 		font-family: Satisfy;
-		background: linear-gradient(to right, #D8AC9C  10%, #cab7b0 50%, #D8AC9C 60%);
+		background: linear-gradient(to right, #999B84 0%, #2e5881 60%, #D8AC9C 100%);
 		background-size: 200% auto;
 		background-clip: text;
 		/* text-fill-color: transparent; */
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-		animation: textclip 5.5s linear infinite;
+		animation: textclip 10.5s linear infinite;
 		display: inline-block;
-
 
 	}
 
@@ -74,8 +73,7 @@ https://i.pinimg.com/originals/4f/21/4b/4f214b9fc3d02b62761e3951b4faf9c5.png */
                 
 
 .home_square{
-  background-image: white;
-  opacity: 0.7;
+  
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -86,12 +84,13 @@ https://i.pinimg.com/originals/4f/21/4b/4f214b9fc3d02b62761e3951b4faf9c5.png */
   color: #e2c5bb;
   font-size: 25px;
   font-weight: 500;
-  height: 40px;
-  width: 100%;
-  margin-top: 150px;
+  height: 110px;
+  width: 115%;
+  margin-top: 200px;
   text-align: center;
   justify-content: center;
-  align-items: center;
+  align-content: center;
+  margin-left: -120px
 }
 
 /* //HEADER  */
@@ -569,20 +568,40 @@ margin-bottom: -15px;
 .subscription_card{
       display: grid;
       grid-template-columns: 1fr 1fr;
+      width: 500px;
       font-family: sans-serif;
-      font-size: 18px;
+      font-size: 16px;
       text-align: center;
       text-decoration:#3e4a52;
-      background-color: white;
+      background-color: #999B84;
       border-radius: 10px;
       padding-bottom: 10px;
       padding-top: 10px;
-      margin-left: 55%;
-      margin-right: 55px;
       margin-bottom: 20px;
+      padding-left: 40px;
+      padding-right: 80px;
+      margin-left: 45%;
+
+
 }
 
 .event_form{
-  margin-top: -60%;
+  margin-top: -108%;
+  margin-left: 60px;
   padding-left: 40px;
+  color:#1f282e;
+      background-color: #999B84;
+      border-radius: 10px;
+      width: 400px;
+padding-bottom: 20px;
+padding-top: 20px;
+}
+
+.calendar_greeting{
+  color: #D8AC9C;
+  text-align: center;
+  padding-top: 10px;
+  font-family: sans-serif;
+  font-size: 28px;
+  font-weight: 500; 
 }
