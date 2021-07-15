@@ -309,7 +309,7 @@ font-family: sans-serif;
 /* //HOW IT WORKS  */
 
 .how_it_works_page{
-  background-image: url("https://i.pinimg.com/originals/8e/06/ea/8e06ea83cb664d889cc799b5d72f8330.jpg");
+  background-image: url("https://wallpaperaccess.com/full/3693524.jpg");
   background-size:50%;
   height: 100vh;
   margin-top: -30px;
@@ -429,7 +429,7 @@ margin-bottom: -15px;
 /* //ABOUT KISMET */
 
 .about_kismet{
-  background-image: url("https://i.pinimg.com/originals/8e/06/ea/8e06ea83cb664d889cc799b5d72f8330.jpg");
+  background-image: url("https://wallpaperaccess.com/full/3693524.jpg");
   background-size:50%;
   height: 90vh;
   margin-top: -25px;
@@ -572,21 +572,24 @@ margin-bottom: -15px;
       font-family: sans-serif;
       font-size: 16px;
       text-align: center;
-      text-decoration:#3e4a52;
-      background-color: #999B84;
+      color:#1f282e; 
+      /* background-color: #999B84; */
       border-radius: 10px;
-      padding-bottom: 10px;
-      padding-top: 10px;
+      padding-bottom: 20px;
+      padding-top: 20px;
       margin-bottom: 20px;
       padding-left: 40px;
       padding-right: 80px;
       margin-left: 45%;
-
-
+      background-image: linear-gradient(to right, #D8AC9C -5%, #EFD9D1 10%, #a7a898 30%, #D8AC9C 120%);
 }
 
+/* .delete_button{
+  background-color: white;
+} */
+
 .event_form{
-  margin-top: -108%;
+  margin-top: -70%;
   margin-left: 60px;
   padding-left: 40px;
   color:#1f282e;
@@ -603,5 +606,5 @@ padding-top: 20px;
   padding-top: 10px;
   font-family: sans-serif;
   font-size: 28px;
-  font-weight: 500; 
+  font-weight: 700; 
 }
