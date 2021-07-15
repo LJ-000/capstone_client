@@ -9,7 +9,7 @@ const SubscriptContainer = (props) => {
             <Subscription
             subscription={subscription}
             key={subscription.id}
-            handleDelete={this.handleDelete}/>
+            />
             
             )}
         </div>

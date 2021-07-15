@@ -18,6 +18,7 @@ const CalendarView = (props) => {
     <Subscription
     subscription={subscription}
     key={subscription.id}
+    handleDelete={props.handleDelete}
     />)}
     </p>
 

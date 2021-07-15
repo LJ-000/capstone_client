@@ -30,12 +30,35 @@ state = {
     mail_by: [],
   };
 
+  constructor(props) {
+      super(props);
+    this.handleDelete = this.handleDelete.bind(this)
+    this.deleteSubscription = this.deleteSubscription.bind(this)
+    }
+
   createNew = (subscription) => this.setState({
     subscription: [...this.state.subscription, subscription] })
 
-    // cartNew = (order) => this.setState({
-    //     order: [...this.state.order, order] })
+    handleDelete(id){
+        fetch(`http://localhost:3000/api/v1/subscriptions/${id}`, 
+        {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }).then((response) => { 
+            console.log('deleted!')
+            this.deleteSubscription(id)
+          })
+      }
     
+      deleteSubscription(id){
+        const newSubscriptions = this.state.subscription.filter((subscription) => subscription.id !== id)
+        this.setState({
+          subscription: newSubscriptions
+        })
+      }
+
 
       componentDidMount() {
         fetch(card_url)
@@ -61,6 +84,7 @@ state = {
 }
 )
     );
+
 }
 
     // Logout = () => {
@@ -112,7 +136,7 @@ state = {
             </Route>
             
             <Route path={["/calendar"]}>
-            <CalendarView subscription={this.state.subscription} createNew = {this.createNew} />
+            <CalendarView subscription={this.state.subscription} createNew = {this.createNew} handleDelete={this.handleDelete} />
             </Route>
 
             <Route path={["/aboutkismet"]}>

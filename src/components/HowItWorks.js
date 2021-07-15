@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Card, CardImg, CardTitle, CardSubtitle, CardGroup} from 'reactstrap';
+import { Card, CardTitle, CardSubtitle, CardGroup} from 'reactstrap';
 
 class HowItWorks extends Component {
 
