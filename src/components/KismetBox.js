@@ -8,19 +8,24 @@ const KismetBox = (props) => {
 
     return (
       <div className="order_page">
-          <h2 className="order_header">Review Your Kismet Box Order</h2>
-          <br /> 
+     
           {/* <OrderCards cartNew={props.cartNew}/> */}  
+
+        <h2 className="order_header">Review Your Kismet Box Order</h2>
+          <br />
+
         <p className="order_card">
 
         <p className="solo_order">
         <CardGroup>
         <Card>  
+        <CardImg  className="order_img" src= "https://s7d5.scene7.com/is/image/PaperSource/10007174?resMode=sharp2&op_usm=1,1,15,1&fmt=jpg&qlt=80&fit=constrain,1&wid=262&hei=262"/>
         <CardTitle tag="h5"> Your Event: Congrats to DC & NYC cohorts</CardTitle> 
         <CardSubtitle tag="h5">Theme: Congratulations</CardSubtitle>
         <CardSubtitle tag="h5">Repeat: Once</CardSubtitle>
         <CardSubtitle tag="h5">$5.46</CardSubtitle>
-        <CardImg  className="order_img" src= "https://s7d5.scene7.com/is/image/PaperSource/10007174?resMode=sharp2&op_usm=1,1,15,1&fmt=jpg&qlt=80&fit=constrain,1&wid=262&hei=262"/>
+        <button className="card_button" >Update Card</button> 
+        <button className="card_button" >Delete Card</button> 
         </Card>
         </CardGroup>
         </p>
@@ -28,11 +33,13 @@ const KismetBox = (props) => {
         <p className="solo_order">
         <CardGroup>
         <Card>  
+        <CardImg  className="order_img" src= "https://s7d5.scene7.com/is/image/PaperSource/10012818?resMode=sharp2&op_usm=1,1,15,1&fmt=jpg&qlt=80&fit=constrain,1&wid=262&hei=262"/>
         <CardTitle tag="h5"> Your Event: Andrew's Wedding</CardTitle> 
         <CardSubtitle tag="h5">Theme: Wedding</CardSubtitle>
         <CardSubtitle tag="h5">Repeat: Once</CardSubtitle>
         <CardSubtitle tag="h5">$5.07</CardSubtitle>
-        <CardImg  className="order_img" src= "https://s7d5.scene7.com/is/image/PaperSource/10012818?resMode=sharp2&op_usm=1,1,15,1&fmt=jpg&qlt=80&fit=constrain,1&wid=262&hei=262"/>
+        <button className="card_button" >Update Card</button> 
+        <button className="card_button" >Delete Card</button> 
         </Card>
         </CardGroup>
         </p>
@@ -40,11 +47,13 @@ const KismetBox = (props) => {
         <p className="solo_order">
         <CardGroup>
         <Card>  
+        <CardImg  className="order_img" src= "https://s7d5.scene7.com/is/image/PaperSource/10016545?resMode=sharp2&op_usm=1,1,15,1&fmt=jpg&qlt=80&fit=constrain,1&wid=262&hei=262"/>
         <CardTitle tag="h5"> Your Event: Mom's Birthday</CardTitle> 
         <CardSubtitle tag="h5">Theme: Birthday</CardSubtitle>
         <CardSubtitle tag="h5">Repeat: Every Year</CardSubtitle>
         <CardSubtitle tag="h5">$4.01</CardSubtitle>
-        <CardImg  className="order_img" src= "https://s7d5.scene7.com/is/image/PaperSource/10016545?resMode=sharp2&op_usm=1,1,15,1&fmt=jpg&qlt=80&fit=constrain,1&wid=262&hei=262"/>
+        <button className="card_button" >Update Card</button> 
+        <button className="card_button" >Delete Card</button> 
         </Card>
         </CardGroup>
         </p>
@@ -52,11 +61,13 @@ const KismetBox = (props) => {
         <p className="solo_order">
         <CardGroup>
         <Card>  
+        <CardImg  className="order_img" src= "https://s7d5.scene7.com/is/image/PaperSource/10008170?resMode=sharp2&op_usm=1,1,15,1&fmt=jpg&qlt=80&fit=constrain,1&wid=262&hei=262"/>
         <CardTitle tag="h5"> Your Event: Aunt Ann's Surgery</CardTitle> 
         <CardSubtitle tag="h5">Theme: Get Well</CardSubtitle>
         <CardSubtitle tag="h5">Repeat: Once</CardSubtitle>
         <CardSubtitle tag="h5">$4.30</CardSubtitle>
-        <CardImg  className="order_img" src= "https://s7d5.scene7.com/is/image/PaperSource/10008170?resMode=sharp2&op_usm=1,1,15,1&fmt=jpg&qlt=80&fit=constrain,1&wid=262&hei=262"/>
+        <button className="card_button" >Update Card</button> 
+        <button className="card_button" >Delete Card</button> 
         </Card>
         </CardGroup>
         </p>
@@ -64,11 +75,13 @@ const KismetBox = (props) => {
         <p className="solo_order">
         <CardGroup>
         <Card>  
+        <CardImg  className="order_img" src= "https://s7d5.scene7.com/is/image/PaperSource/10012546?resMode=sharp2&op_usm=1,1,15,1&fmt=jpg&qlt=80&fit=constrain,1&wid=262&hei=262"/>
         <CardTitle tag="h5"> Your Event: Theresa's Housewarming Party</CardTitle> 
         <CardSubtitle tag="h5">Theme: Housewarming</CardSubtitle>
         <CardSubtitle tag="h5">Repeat: Once</CardSubtitle>
         <CardSubtitle tag="h5">$4.70</CardSubtitle>
-        <CardImg  className="order_img" src= "https://s7d5.scene7.com/is/image/PaperSource/10012546?resMode=sharp2&op_usm=1,1,15,1&fmt=jpg&qlt=80&fit=constrain,1&wid=262&hei=262"/>
+        <button className="card_button" >Update Card</button> 
+        <button className="card_button" >Delete Card</button> 
         </Card>
         </CardGroup>
         </p>
@@ -76,11 +89,13 @@ const KismetBox = (props) => {
         <p className="solo_order">
         <CardGroup>
         <Card>  
+        <CardImg  className="order_img" src= "https://papersource.resultspage.com/thumb.php?f=https%3a%2f%2fs7d5.scene7.com%2fis%2fimage%2fPaperSource%2f3929991343&s=300&quality=70"/>
         <CardTitle tag="h5"> Your Event: My Birthday Party</CardTitle> 
         <CardSubtitle tag="h5">Theme: Invitation</CardSubtitle>
         <CardSubtitle tag="h5">Repeat: Every Year</CardSubtitle>
         <CardSubtitle tag="h5">$5.53</CardSubtitle>
-        <CardImg  className="order_img" src= "https://papersource.resultspage.com/thumb.php?f=https%3a%2f%2fs7d5.scene7.com%2fis%2fimage%2fPaperSource%2f3929991343&s=300&quality=70"/>
+        <button className="card_button" >Update Card</button> 
+        <button className="card_button" >Delete Card</button> 
         </Card>
         </CardGroup>
         </p>
@@ -88,15 +103,21 @@ const KismetBox = (props) => {
         <p className="solo_order">
         <CardGroup>
         <Card>  
+        <CardImg  className="order_img" src= "https://s7d5.scene7.com/is/image/PaperSource/10016796?resMode=sharp2&op_usm=1,1,15,1&fmt=jpg&qlt=80&fit=constrain,1&wid=262&hei=262"/>
         <CardTitle tag="h5"> Your Event: John's Graduation</CardTitle> 
         <CardSubtitle tag="h5">Theme: Graduation</CardSubtitle>
         <CardSubtitle tag="h5">Repeat: Once</CardSubtitle>
         <CardSubtitle tag="h5">$5.07</CardSubtitle>
-        <CardImg  className="order_img" src= "https://s7d5.scene7.com/is/image/PaperSource/10016796?resMode=sharp2&op_usm=1,1,15,1&fmt=jpg&qlt=80&fit=constrain,1&wid=262&hei=262"/>
+        <button className="card_button" >Update Card</button> 
+        <button className="card_button" >Delete Card</button> 
         </Card>
         </CardGroup>
         </p>
-
+        <br /> 
+        <br /> 
+        <br /> 
+        <br /> 
+        <br /> 
         </p>
 
         <p className="checkout">
@@ -115,6 +136,7 @@ const KismetBox = (props) => {
         </p>
         </p>
        
+
       </div>
     )}
         

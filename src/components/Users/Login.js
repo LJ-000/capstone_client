@@ -37,7 +37,7 @@ return(
         {/* <input type="submit"/> */}
         <br /> 
         <br /> 
-        <button className="login_button" onClick={event =>  window.location.href='/calendar'}>Login</button>
+        <button className="login_button" onClick={event =>  window.location.href='/home'}>Login</button>
         </p>
     </div>
 )}

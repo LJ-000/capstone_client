@@ -6,17 +6,25 @@ const CalendarView = (props) => {
 
     return (
 
-<div>
-    <p>Welcome back, Laura! Who are we celebrating?</p>
-    <p>Update your calendar with upcoming events!</p>
+<div className="calendar_page">
+    <p>
+    Welcome back, Laura! Who are we celebrating?
+    <br /> 
+    Update your calendar with upcoming events!
+    </p>
+
+    <p className="subscription_card">
     {props.subscription.map(subscription =>
     <Subscription
     subscription={subscription}
     key={subscription.id}
     />)}
+    </p>
 
-<CreateEvent createNew = {props.createNew}/>
-    
+    <p className="event_form">
+    <CreateEvent createNew = {props.createNew}/>
+    </p> 
+
 </div>
 )}
 

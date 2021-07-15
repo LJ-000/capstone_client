@@ -29,14 +29,21 @@ https://i.pinimg.com/originals/4f/21/4b/4f214b9fc3d02b62761e3951b4faf9c5.png */
 /* //HOMEPAGE  */
 
 .homepage {
-  background-image: linear-gradient(to right, #D8AC9C -5%, #EFD9D1 10%, #d1e1f1 30%, #747561 120%);
+  /* background-image: linear-gradient(to right, #D8AC9C -5%, #EFD9D1 10%, #d1e1f1 30%, #747561 120%); */
   height: 90vh;
-  width: 100%;
   margin-top: -30px;
   font-family: sans-serif;
   font-size: 20px;
   color:#2e5881 ;
   text-align: center;
+  background-repeat: repeat;
+  background-size: 50%;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSglmzdDDumZbrJ3GPKUSxQklPGGY-lovSnKx5un9PIUQVl6ICHR9-sstFIjFgoznIln8Q&usqp=CAU");
+}
+
+.home_square{
+  background-color: white;
+  border-radius: 10px;
 }
 
 .home_quote{
@@ -268,9 +275,9 @@ font-family: sans-serif;
 
 .how_it_works_page{
   background-image: url("https://i.pinimg.com/originals/8e/06/ea/8e06ea83cb664d889cc799b5d72f8330.jpg");
-  background-size:35%;
-  height: 120vh;
-  margin-top: -40px;
+  background-size:50%;
+  height: 100vh;
+  margin-top: -30px;
   padding-left: 450px;
   background-repeat: no-repeat;
   background-color: #EFD9D1;
@@ -279,12 +286,12 @@ font-family: sans-serif;
 
 .how_it_works_header{
   color:  #696b56;
-  font-size: 40px;
-  font-weight: 525;
+  font-size: 30px;
+  font-weight: 550;
   align-content: center;
-  margin-left:  20px;
-  margin-bottom: -5px;
-  padding-top: 40px;
+  margin-left:  230px;
+  margin-bottom: 5px;
+  padding-top: 20px;
 }
 
 .how_cards{
@@ -292,13 +299,13 @@ font-family: sans-serif;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 30px;
-    font-size: 15px;
+    font-size: 13px;
     font-family: sans-serif;
     color:#50575C;
     box-shadow: 3px 3px #C3CCCE, -3px -3px #C3CCCE;
-    width: 80%;
+    width: 70%;
     box-sizing: border-box;
-    margin-left: 90px;
+    margin-left: 220px;
     margin-top: -20px;
 }
 
@@ -407,31 +414,49 @@ margin-bottom: -15px;
     /* //KISMET BOX */
 
     .order_page{
-      background-image: linear-gradient(to right, #D8AC9C 0%, #EFD9D1 20%, #edf1f5 40%, #b3b4a3 100%);
-      height: 240vh;
-      margin-top: -20px;
+      background-image: linear-gradient(to right, #D8AC9C -5%, #EFD9D1 10%, #2e5881 30%, #D8AC9C 120%);
+      height: 270vh;
+      justify-content: center;
+      align-items: center;
+      padding-top: 10px;
     }
 
     .order_header{
-      color: #2e5881;
-      padding-top: 40px;
-      padding-left: 40px;
+      color: #D8AC9C;
+      text-align: center;
+      padding-top: 10px;
     }
 
     .order_card{
       display: grid;
-      /* grid-template: 150px / auto auto auto; */
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 30px;
-      justify-content: center;
-      align-items: center;
       font-family: sans-serif;
-      font-size: 20px;
+      font-size: 18px;
       margin-top: -10px;
       padding-left: 50px;
       padding-right: 50px;
       text-align: center;
-      text-decoration:#262e33;
+      text-decoration:#3e4a52;
+      background-color: white;
+      border-radius: 10px;
+      margin-left:70px;
+      margin-right:70px;
+      padding-bottom: 30px;
+      padding-top: 30px;
+
+    }
+
+    .card_button{
+      background-color: #2e5881;
+      color:#EFD9D1;
+      transition-duration: 0.4s;
+      margin-top: 15px
+    }
+
+    .card_button:hover {
+      background-color: #EFD9D1;
+      color:#2e5881;
     }
 
     .order_img{
@@ -444,28 +469,33 @@ margin-bottom: -15px;
     }
 
     .solo_order{
-      border-style:solid;
-      border-color: #2e5881;
-      border-radius: 20px;
-      align-content: center;
-      padding-bottom: -20px;
+      padding-bottom: -40px;
       margin-bottom: 10px;
+      color: #3e4a52
     }
 
     .checkout{
-      align-items: center;
-      justify-content: center;
       font-family: sans-serif;
       font-size: 20px;
       text-align: center;
-      width: 100%;
+      width: 98%;
       height: 20%;
       color: #EFD9D1 ;
-      background: #f6f7f8;
-      background-image: linear-gradient(to right, #D8AC9C -5%, #EFD9D1 10%, #2e5881 30%, #999B84 120%);
       display: inline-block;
       position: relative; 
-      padding-top: 25px
+      padding-top: 55px;
+      padding-bottom: 10px;
+      justify-content: center;
+      align-items: center;
+      background-image: linear-gradient(to right, #D8AC9C -5%, #EFD9D1 10%, #2e5881 30%, #D8AC9C 120%);
+      border-radius: 10px;
+      border-color:#D8AC9C;
+      border-style: solid;
+      border-spacing: 30px;
+      margin-left:10px;
+      margin-right:70px;
+      margin-top: -5px
+
     }
 
     .order_button{
@@ -490,5 +520,33 @@ margin-bottom: -15px;
       padding-left: 100px;
       font-size: 30px;
       color:#2e5881 ;
-
     }
+
+.calendar_page{
+    background-image: linear-gradient(to right, #D8AC9C -5%, #EFD9D1 10%, #2e5881 30%, #D8AC9C 120%);
+      height: 270vh;
+      justify-content: center;
+      align-items: center;
+      padding-top: 10px;
+}
+
+.subscription_card{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      font-family: sans-serif;
+      font-size: 18px;
+      text-align: center;
+      text-decoration:#3e4a52;
+      background-color: white;
+      border-radius: 10px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      margin-left: 55%;
+      margin-right: 55px;
+      margin-bottom: 20px;
+}
+
+.event_form{
+  margin-top: -60%;
+  padding-left: 40px;
+}
