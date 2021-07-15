@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Card, CardTitle, CardSubtitle, CardGroup, CardBody, Button} from 'reactstrap';
 
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
@@ -38,7 +38,7 @@ const Subscription = (props) => {
     </div>
 
   )
-
+          
 }
 
 export default Subscription 

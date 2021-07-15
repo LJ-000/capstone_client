@@ -34,6 +34,8 @@ state = {
       super(props);
     this.handleDelete = this.handleDelete.bind(this)
     this.deleteSubscription = this.deleteSubscription.bind(this)
+    this.handleUpdate = this.handleUpdate.bind(this);
+    this.updateSubscription = this.updateSubscription.bind(this)
     }
 
   createNew = (subscription) => this.setState({
@@ -58,6 +60,26 @@ state = {
           subscription: newSubscriptions
         })
       }
+    
+    handleUpdate(subscription){
+      fetch(`http://localhost:3000/api/v1/subscriptions/${subscription.id}`, 
+      {
+        method: 'PUT',
+        body: JSON.stringify({subscription: subscription}),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then((response) => { 
+          this.updateSubscription(subscription)
+        })
+    }
+    updateSubscription(subscription){
+      let newSubscription = this.state.subscription.filter((f) => f.id !== subscription.id)
+      newSubscription.push(subscription)
+      this.setState({
+        subscription: newSubscription
+      })
+    }  
 
 
       componentDidMount() {
@@ -136,7 +158,7 @@ state = {
             </Route>
             
             <Route path={["/calendar"]}>
-            <CalendarView subscription={this.state.subscription} createNew = {this.createNew} handleDelete={this.handleDelete} />
+            <CalendarView subscription={this.state.subscription} createNew = {this.createNew} handleDelete={this.handleDelete} handleUpdate = {this.handleUpdate} />
             </Route>
 
             <Route path={["/aboutkismet"]}>

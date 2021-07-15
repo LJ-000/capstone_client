@@ -205,7 +205,7 @@ export default class CreateEvent extends Component {
                 </select>
               </div>
               <br />
-              <button type="submit" onClick={event =>  window.location.href='/cards'}>Submit Event</button>
+              <button className="new_event" type="submit" onClick={event =>  window.location.href='/cards'}>Submit Event</button>
               <div>
               {/* <Modal open={this.state.openModal} onClose={this.onCloseModal}>
                 <h1>Your New Event Was Added!</h1>

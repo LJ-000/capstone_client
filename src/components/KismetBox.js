@@ -20,7 +20,7 @@ const KismetBox = (props) => {
         <CardGroup>
         <Card>  
         <CardImg  className="order_img" src= "https://s7d5.scene7.com/is/image/PaperSource/10007174?resMode=sharp2&op_usm=1,1,15,1&fmt=jpg&qlt=80&fit=constrain,1&wid=262&hei=262"/>
-        <CardTitle tag="h5"> Your Event: Congrats to DC & NYC cohorts</CardTitle> 
+        <CardTitle tag="h5"> Your Event: Congrats DC & NYC!</CardTitle> 
         <CardSubtitle tag="h5">Theme: Congratulations</CardSubtitle>
         <CardSubtitle tag="h5">Repeat: Once</CardSubtitle>
         <CardSubtitle tag="h5">$5.46</CardSubtitle>
