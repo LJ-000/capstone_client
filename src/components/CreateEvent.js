@@ -4,7 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 // import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
 
-const subscription_url = "http://localhost:3000/api/v1/subscriptions";
+const subscription_url = "http://localhost:3000/subscriptions";
 
 export default class CreateEvent extends Component {
 

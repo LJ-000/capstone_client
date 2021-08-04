@@ -1,8 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 
-const Navbar =() => {
-    
+const Navbar = (props) => {
         return (
          
            <div className ="navbar">
@@ -28,13 +27,13 @@ const Navbar =() => {
                    ABOUT KISMET  
                    </Link>
                    
-                   <Link to="/login" className = "nav_login" href="login"> 
+                   <button className = "nav_login" onClick={() => props.handleFormSwitch("login")}> 
                    LOGIN   / 
-                   </Link>
+                   </button>
                    
-                   <Link to="/register" className = "nav_register" href="register"> 
+                   <button className = "nav_register" onClick={() => props.handleFormSwitch("register")}> 
                    REGISTER 
-                   </Link>
+                   </button>
             </div>
 
         );

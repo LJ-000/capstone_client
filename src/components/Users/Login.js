@@ -1,46 +1,27 @@
-import React from 'react'
+// import React from 'react'
 
-const Login = () => {
-    // let logIn= (e) => {
-    //     e.preventDefault()
+// const Login = () => {
+ 
+// return(
+//     <div className="login_page">
+//         <h2 className="login_header">Welcome Back</h2>
+//         <h2 className="login_subheader">send a card, make someone's day</h2>
+//         <br /> 
+//         <br /> 
 
-        // fetch("http://localhost:3000/api/v1/users/login", {
-        //     method: "POST",
-        //     headers: {
-        //         "Content-Type": "application/json"
-        //     },
-        //     body: JSON.stringify({
-        //         username: e.target[0].value,
-        //         password: e.target[1].value 
-        //     })
-        //     })
-        //     .then(res => res.json()
-        //     .then(userInfo => {
-        //         localStorage.token = userInfo.token 
-        //     }))
-        // }
+//         <p className="credentials"> 
+//         {/* // onSubmit={(e) => logIn(e) } Login> */}
+//         <label className="username">Username</label>
+//         <input className="username2" name="username" type="text"/>
+//         <br /> 
+//         <label className="password">Password</label>
+//         <input className="password2" name="password" type="password"/>
+//         {/* <input type="submit"/> */}
+//         <br /> 
+//         <br /> 
+//         <button className="login_button" onClick={event =>  window.location.href='/home'}>Login</button>
+//         </p>
+//     </div>
+// )}
 
-return(
-    <div className="login_page">
-        <h2 className="login_header">Welcome Back</h2>
-        <h2 className="login_subheader">send a card, make someone's day</h2>
-        <br /> 
-        <br /> 
-
-        <p className="credentials"> 
-        {/* // onSubmit={(e) => logIn(e) } Login> */}
-        <label className="username">Username</label>
-        <input className="username2" name="username" type="text"/>
-        <br /> 
-        <label className="password">Password</label>
-        <input className="password2" name="password" type="password"/>
-        {/* <input type="submit"/> */}
-        <br /> 
-        <br /> 
-        <button className="login_button" onClick={event =>  window.location.href='/home'}>Login</button>
-        </p>
-    </div>
-)}
-
-export default Login
-
+// export default Login
