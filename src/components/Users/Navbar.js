@@ -27,13 +27,15 @@ const Navbar = (props) => {
                    ABOUT KISMET  
                    </Link>
                    
-                   <button className = "nav_login" onClick={() => props.handleFormSwitch("login")}> 
+                   <Link className = "nav_login" to="/login">
+                   {/* onClick={() => props.handleFormSwitch("login")}>  */}
                    LOGIN   / 
-                   </button>
+                   </Link>
                    
-                   <button className = "nav_register" onClick={() => props.handleFormSwitch("register")}> 
+                   <Link className = "nav_register" to="/login">
+                   {/* onClick={() => props.handleFormSwitch("register")}>  */}
                    REGISTER 
-                   </button>
+                   </Link>
             </div>
 
         );

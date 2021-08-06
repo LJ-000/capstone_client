@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Auth from './components/Users/Auth';
 import Register from './components/Users/Register';
 import Header from './components/Header';
-// import Navbar from './components/Users/Navbar';
+import Navbar from './components/Users/Navbar';
 import Home from './components/Home';
 import CardContainer from './components/CardContainer';
 import HowItWorks from './components/HowItWorks';
@@ -115,7 +115,7 @@ state = {
         <div className="app_container">
             <BrowserRouter>
             <Header/>
-            {/* <Navbar/> */}
+            <Navbar/>
             <Switch>
             <Route exact path={["/", "/home"]}>
                 <Home />

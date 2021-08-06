@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import LoginForm from './LoginForm';
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 import SignUpForm from './SignUpForm';
 
 const Auth = () => {
-    
+
 const [user, setUser] = useState({});
 const [form, setForm] = useState("")
 
@@ -27,9 +27,9 @@ const [form, setForm] = useState("")
     setUser(user)
   }
 
-const handleFormSwitch = (input) => {
-    setForm(input)
-  }
+// const handleFormSwitch = (input) => {
+//     setForm(input)
+//   }
   
   const handleAuthClick = () => {
       const token = localStorage.getItem("token")
@@ -42,22 +42,24 @@ const handleFormSwitch = (input) => {
       .then(data => console.log(data))
     }
 
-  const renderForm = () => {
-      switch(form){
-        case "login":
-          return <LoginForm handleLogin={handleLogin}/>
-          break;
-        default:
-          return <SignUpForm handleLogin={handleLogin}/>
-    }
-  }
+//   const renderForm = () => {
+//       switch(form){
+//         case "login":
+//           return <LoginForm handleLogin={handleLogin}/>
+//           break;
+//         default:
+//           return <SignUpForm handleLogin={handleLogin}/>
+//     }
+//   }
 
 return(
     <div>
-    <Navbar handleFormSwitch={handleFormSwitch}/>
+    {/* <Navbar handleFormSwitch={handleFormSwitch}/>
     {
       renderForm()
-    }
+    } */}
+    <LoginForm handleLogin={handleLogin}/>
+    <SignUpForm handleLogin={handleLogin}/>
     <button onClick={handleAuthClick} className="ui button">Access Authorized Route</button>
 </div>
 );

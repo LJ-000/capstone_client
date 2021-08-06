@@ -41,7 +41,7 @@ const LoginForm = (props) => {
         <h2 className="login_subheader">send a card, make someone's day</h2>
          <br /> 
          <br /> 
-           <form class="ui form" onSubmit={handleSubmit}>
+           <form className="ui form" onSubmit={handleSubmit}>
 
          <p className="credentials"> 
          <label className="username">Username</label>
