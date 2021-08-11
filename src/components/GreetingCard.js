@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Card, CardImg, CardTitle, CardSubtitle, CardGroup, Button} from 'reactstrap';
 
 const GreetingCard = (props) => {
@@ -13,40 +13,15 @@ const GreetingCard = (props) => {
 //         id: 0
 //     }
 // ]);
-
-//     const sendToKismetBox = (cardData) => {
-//             console.log(props)
-//             const img = cardData.img 
-//             const theme = cardData.theme
-//             const price = cardData.price 
-//             const audience = cardData.audience
-//             const quantity = cardData.quantity
-//             const id = cardData.id
-    
-    
-//             const sendStuff = {
-//                 headers: { "Content-Type": "application/json" },
-//                 method: "POST",
-//                 body: JSON.stringify({ ...cardData })
-//             }
-    
-//             fetch("http://localhost:3000/api/v1/orderitems", sendStuff)
-//                 .then(rsp => rsp.json())
-//                 .then((setcardData => props.cartNew(setcardData)))
-//         }
              
-
-return (
-            
+return (      
     <div>
         <CardGroup>
         <Card>  
         <CardImg className="card_img" width="20%" src={props.card.img}/>
         <CardTitle className="card_title" tag="h5">{props.card.theme}</CardTitle> 
         <CardSubtitle tag="h5" className="card_price">${props.card.price}</CardSubtitle>
-        <Button className="add_to_cart" onClick={event =>  window.location.href='/kismetbox'}
-        // onClick={(cardData) => sendToKismetBox(cardData)}
-        >Add to Cart</Button> 
+        <Button className="add_to_cart" onClick={event =>  window.location.href='/kismetbox'}>Add to Cart</Button> 
         </Card>
         </CardGroup>
     </div>

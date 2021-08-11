@@ -28,6 +28,7 @@ const options = [
       render() {
           const { theme } = this.state;
       return (
+    
       <div className="theme_search">
       <h3>Select the event theme</h3>
       <Select
@@ -36,6 +37,7 @@ const options = [
           onChange={this.handleChange}
           />
       </div>
+     
           );
       }
   }

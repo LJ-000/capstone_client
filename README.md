@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# Welcome to Kismet!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img height="400" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F23%2F2014%2F04%2F28%2Foffice-desk-accessories-0120wwo.jpg&q=85"></img>
 
-## Available Scripts
+## About Kismet
 
-In the project directory, you can run:
+Kismet is a subscription service app for remebering every upcoming event in life and sending the perfect greeting card -- birthdays, anniversaries, weddings, graduations, the people in your life can't wait to hear from you. 
 
-### `yarn start`
+This app is a single page application that houses a React front end, and a Ruby backend.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Login
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Login authentication built using JWT. If user does not exist in the database, an alert will prompt them to try logging in again. If the login credentials are authenticated, the user will be redirected to their My Events page.
 
-### `yarn test`
+## My Events
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Greeting Cards
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The greeting card page does not require a login. Anyone can be directed to this page from the navbar. This page shows the greeting card library including an image, price, and theme. Users can use various dropdown search bars to filter cards by event theme, such as, birthdays, anniversaries, get well, thank you, etc. etc. The other search filters cards by their intended audience, such as, mom, dad, significant other, wife, husband, etc, etc. If a user is logged in and they click Add To Cart, that greeting card will be added to their shopping cart. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Back-End
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to check out the Ruby on Rails back-end repo and Kismet database <a href="https://github.com/LJ-000/capstone_backend">here</a>.

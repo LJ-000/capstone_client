@@ -1,8 +1,9 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 // import CreateEvent from './components/CreateEvent';
 import Auth from './components/Users/Auth';
-import Register from './components/Users/Register';
+// import Register from './components/Users/Register';
+// import Login from './components/Users/Login';
 import Header from './components/Header';
 import Navbar from './components/Users/Navbar';
 import Home from './components/Home';
@@ -16,8 +17,7 @@ import OrderConfirmation from './components/OrderConfirmation';
 
 const card_url = "http://localhost:3000/cards";
 const subscription_url = "http://localhost:3000/subscriptions";
-const order_url = "http://localhost:3000/orders";
-
+// const order_url = "http://localhost:3000/orders";
 
 class AppContainer extends Component {
 
@@ -99,13 +99,13 @@ state = {
     )
 );
 
-        fetch(order_url)
-        .then(res => res.json())
-        .then(data => this.setState({
-            order: data,   
-        }
-    )
-);
+//         fetch(order_url)
+//         .then(res => res.json())
+//         .then(data => this.setState({
+//             order: data,   
+//         }
+//     )
+// );
 
 }
  
@@ -120,12 +120,12 @@ state = {
             <Route exact path={["/", "/home"]}>
                 <Home />
             </Route>
-                
-            <Route exact path={["/register"]}>
-                <Register/>
-            </Route>
 
             <Route exact path={["/login"]}>
+                <Auth/>
+            </Route> 
+
+            <Route exact path={["/register"]}>
                 <Auth/>
             </Route> 
 

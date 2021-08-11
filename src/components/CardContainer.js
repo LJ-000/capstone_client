@@ -23,7 +23,6 @@ const CardContainer = (props) => {
 
         return (
             <div className="card_container">
-                {/* <h3>Kismet Greeting Cards</h3> */}
                 <br /> 
                 <br /> 
 

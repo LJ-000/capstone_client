@@ -14,7 +14,7 @@ Your Kismet Box will arrive in 5 to 7 business days
 <br />You will receive a confirmation email shortly
 <br />
 <br />
-<img width="600px" src = "https://cdn.dribbble.com/users/1637239/screenshots/3810121/paper_plane.gif"/>
+<img width="600px" src = "https://cdn.dribbble.com/users/1637239/screenshots/3810121/paper_plane.gif" alt = "" />
 </p>
 </div>
 
