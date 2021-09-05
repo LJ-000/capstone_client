@@ -86,7 +86,7 @@ const KismetBox = (props) => {
         </CardGroup>
         </p>
 
-        <p className="solo_order">
+        {/* <p className="solo_order">
         <CardGroup>
         <Card>  
         <CardImg  className="order_img" src= "https://papersource.resultspage.com/thumb.php?f=https%3a%2f%2fs7d5.scene7.com%2fis%2fimage%2fPaperSource%2f3929991343&s=300&quality=70"/>
@@ -98,7 +98,7 @@ const KismetBox = (props) => {
         <button className="card_button" >Delete Card</button> 
         </Card>
         </CardGroup>
-        </p>
+        </p> */}
 
         <p className="solo_order">
         <CardGroup>

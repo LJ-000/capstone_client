@@ -40,7 +40,7 @@ return(
     <div>
     <LoginForm handleLogin={handleLogin}/>
     <SignUpForm handleLogin={handleLogin}/>
-    <button onClick={handleAuthClick} className="ui button">Access Authorized Route</button>
+    <button onClick={event =>  window.location.href='/calendar'} className="ui button">Access Authorized Route</button>
 </div>
 );
 }

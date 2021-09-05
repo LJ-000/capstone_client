@@ -52,7 +52,7 @@ const LoginForm = (props) => {
             <input className="password2" value={password} onChange={handlePasswordChange} type="password" placeholder="password"/>
          <br /> 
          <br /> 
-         <button className="login_button" type="submit">Submit</button>
+         <button className="login_button" type="submit" onClick={event =>  window.location.href='/calendar'}>Submit</button>
          </p>
          </form>
      </div>

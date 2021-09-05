@@ -14,7 +14,7 @@ const Subscription = (props) => {
              {/* {console.log(Date.parse(props.subscription.mail_by))} */}
             {/* {console.log(Date.parse(props.subscription.mail_by).toDateString())} */}
 
-{console.log(formatedDate)}
+{/* {console.log(formatedDate)} */}
             <CardGroup className="text-center">
             <Card>  
             <CardTitle tag="h3">{props.subscription.event_name}</CardTitle> 
